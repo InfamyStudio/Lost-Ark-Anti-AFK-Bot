@@ -1,3 +1,4 @@
+[![CodeQL](https://github.com/InfamyStudio/lostArkAntiAFKBot/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/InfamyStudio/lostArkAntiAFKBot/actions/workflows/codeql-analysis.yml)
 # Lost Ark Anti AFK Bot
 To tackle the issue of long queue times and harsh AFK timers I have created an Anti AFK Bot For Lost ARK
 
@@ -6,28 +7,33 @@ There is no known fact that EAC has an issue with CLI (Command Line Interfaces) 
 It is up to you if you choose to run the program!
 
 # Latest Release
-- Currently [V1.1](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.1) is the latest release available!
-- Added automatic screen resolution detection, changes screen click location accordingly!
-- Added input for shortest and longest wait time to random between as the time wait before next input from the bot
+- Currently [V1.2](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.2) is the latest release available!
+- Added user input for keys for the bot to click
+- Fixed a few bugs and bot crash vectors on input
+- Changed CLI Interface to make it easier to read
 - Updated Minified to new source code
 - Update Obfuscated to new source code
 
 # Usage
 ## Usage ~ About
-- I recommend using the obfuscated version of the project nicknamed "iCloudBackup"
-- The name is just used as a "funny" idea to trick AC even though it will probably have 0 impact
-- I recomend going to a private area in Lost Ark and all you would need to do is boot up the program and switch back to Lost Ark
-## Usage ~ Program
+- I recommend using the obfuscated version of the project nicknamed "Obfuscated.py"
+- I recommend changing the name of the program and burying it elsewhere on the file system
+- I recommend going to a private area in Lost Ark and all you would need to do is boot up the program and switch back to Lost Ark
+## Usage ~ Program Setup
 - System automatically detects resolution and adjusts config accordingly
 - System asks you to enter shortest/longest wait ttime to randomly select wait times between
+- System asks you if you want to add more Buttons to the Click List
+- You can choose to expand out the default buttons which are: ['q','w','e','r','a','s','d','f']
+## Usage ~ Program Run time
 - The system starts off with a mouse click at a random screen location cords within the clickable area of the game
-- The system then presses a key which are the default keys you use your abilities for
+- The system then presses a key which is randomly selected from the Buttons List (Either Default Or Custom)
 - The system runs 30-120 seconds random time selection between each event
 - The system selects a random key button every time of the array of "usable" buttons
 - The systems selects a random screen coordinate to click every time
 - The program runs indefinitely until closed and be careful not to run the program e.g. just on your desktop
 
 # Release History
+- [V1.2](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.2)
 - [V1.1](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.1)
 - [V1.0](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.0)
 
@@ -45,11 +51,12 @@ It is up to you if you choose to run the program!
 - Use at your own discretion!
 
 ## Plans for the future:
-- Create a better security for the overall program and obfuscate more!
-- Create the program in a language like C or Java and run a known EAC bypass
-- Add more complex interactions with the game such as buying or selling items
+- EAC Bypass
+- Create the program in multiple languages and different executables
+- Possibly expand this project into a bot that interacts with the game better
 - Add Queue detection (program only starts clicking etc when in game and not in Queue)
 
 ## Plans Completed:
 - Add custom screen setup for all resolution types (Done)
 - Add user input for selected wait times between inputs (Done)
+- Add user input for selected keys to press (Done)

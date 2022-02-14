@@ -64,10 +64,16 @@ def TimeSetup():
             timebot = int(input("Please Enter The Shortest Amount of Seconds To Wait Before Input - Recommended (30 seconds): "))
             if timebot <= 0:
                 print("Must Type an Integer > 0")
+            elif timebot >= 4294967:
+                print("This is to large of a time input!")
             else:
                 timetop = int(input("Please Enter The Longest Amount of Seconds To Wait Before Input - Recommended (1200 seconds): "))
                 if timetop <= 0:
                     print("Must Type an Integer > 0")
+                elif timetop <= timebot:
+                    print("This should be not equal to or larger then the lowest amount in range")
+                elif timetop >= 4294967:
+                    print("This is to large of a time input!")
                 else:
                     break
         except ValueError:
@@ -82,7 +88,7 @@ def RandomTimeGen(userTimeSettings):
 def TimeSleep(timeSleepSettings):
         userTimeSettings = timeSleepSettings
         timeWait = RandomTimeGen(userTimeSettings)
-        print("Time Waiting Before Next Input: " + str(timeWait) + " second(s) or " + str(timeWait/60) + " minute(s)!")
+        print("Time Waiting Before Next Interaction: " + str(timeWait) + " second(s) or " + str(timeWait/60) + " minute(s)!")
         time.sleep(timeWait)
 
 def RandomLocationGen(resScreenSize):
@@ -100,18 +106,53 @@ def MouseClick(retScreenSize):
     pyautogui.click()
     print("Mouse Clicked At: (" + str(randomx) + "," + str(randomy) + ")")
 
-def ButtonClick():
+def ButtonSetup():
     ButtonClickList = ['q','w','e','r','a','s','d','f']
+    print("The Default Button Click List Is:")
+    print(ButtonClickList)
+    while True:
+        try:
+            menuCheck = str(input("Would You Like To Add More Keys To The ButtonClickList? Enter (Y) or (N): ")).lower()
+            if menuCheck == "y":
+                while True:
+                    try:
+                        amountToAppendCheck = int(input("How Many Keys Would You Like To Add To The List: "))
+                        for i in range(amountToAppendCheck):
+                            keyInput = input("Please Press a Key or Write The Key, Such As 'space' and then press enter: ")
+                            ButtonClickList.append(keyInput)
+                        break
+                    except ValueError:
+                        print("Type Error: You Have Entered An Incorrect Type! Please Enter An Integer")
+                break
+            elif menuCheck == "n":
+                break
+            else:
+                print("Input Error: Please Enter Either Y or N")
+        except ValueError:
+            print("Type Error: You Have Entered An Incorrect Type! Please Enter Either Y or N")
+    return ButtonClickList
+
+def ButtonClick(buttonSetup):
+    ButtonClickList = buttonSetup
     RandomButtonChoice = randint(0,7)
     ButtonClick = ButtonClickList[RandomButtonChoice]
     pyautogui.press(ButtonClick)
     print("Button Clicked: " + ButtonClick)
 
 if __name__ == "__main__":
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     retScreenSize = ScreenSetup()
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    time.sleep(2)
+    buttonSetup = ButtonSetup()
+    print("The Button Click List Is: ")
+    print(buttonSetup)
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    time.sleep(2)
     timeSleepSettings = TimeSetup()
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     while True:
         TimeSleep(timeSleepSettings)  
         MouseClick(retScreenSize)
         TimeSleep(timeSleepSettings)
-        ButtonClick()
+        ButtonClick(buttonSetup)
