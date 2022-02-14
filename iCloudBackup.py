@@ -1,0 +1,11 @@
+I =str #line:1
+H =print #line:2
+import time ,pyautogui as B #line:3
+from random import randint as A #line:4
+def D ():OOOOO00O0O0O00OO0 =A (30 ,120 );return OOOOO00O0O0O00OO0 #line:5
+def C ():OO0O00O0OO000000O =D ();time .sleep (OO0O00O0OO000000O )#line:6
+def E ():OOOOO0O0O000O0O00 =A (382 ,1582 );OOO00O0O0000O000O =A (181 ,903 );return OOOOO0O0O000O0O00 ,OOO00O0O0000O000O #line:7
+def F ():O00O000O00OO0O000 =E ();OO0000OOOOOO0OO0O =O00O000O00OO0O000 [0 ];O000O000O00OOO00O =O00O000O00OO0O000 [1 ];B .moveTo (OO0000OOOOOO0OO0O ,O000O000O00OOO00O );B .click ();H ('Mouse Clicked At: ('+I (OO0000OOOOOO0OO0O )+','+I (O000O000O00OOO00O )+')')#line:8
+def G ():O00000O0OOOOOO0OO =['q','w','e','r','a','s','d','f'];O00OOOOOOO0OOO00O =A (0 ,7 );O000O00OOO0OOO000 =O00000O0OOOOOO0OO [O00OOOOOOO0OOO00O ];B .press (O000O00OOO0OOO000 );H ('Button Clicked: '+O000O00OOO0OOO000 )#line:9
+if __name__ =='__main__':#line:10
+	while True :C ();F ();C ();G ()
