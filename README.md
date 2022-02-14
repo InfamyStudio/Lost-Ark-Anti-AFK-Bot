@@ -28,6 +28,7 @@ It is up to you if you choose to run the program!
 - The program runs indefinitely until closed and be careful not to run the program e.g. just on your desktop
 
 # Release History
+- [V1.1](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.1)
 - [V1.0](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.0)
 
 ## Setup:
