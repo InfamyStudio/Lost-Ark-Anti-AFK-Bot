@@ -21,7 +21,7 @@ It is up to you if you choose to run the program!
 - I recommend going to a private area in Lost Ark and all you would need to do is boot up the program and switch back to Lost Ark
 ## Usage ~ Program Setup
 - System automatically detects resolution and adjusts config accordingly
-- System asks you to enter shortest/longest wait ttime to randomly select wait times between
+- System asks you to enter shortest/longest wait time to randomly select wait times between
 - System asks you if you want to add more Buttons to the Click List
 - You can choose to expand out the default buttons which are: ['q','w','e','r','a','s','d','f']
 ## Usage ~ Program Run time
