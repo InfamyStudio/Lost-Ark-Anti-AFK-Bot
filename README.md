@@ -1,3 +1,4 @@
+[![CodeQL](https://github.com/InfamyStudio/lostArkAntiAFKBot/actions/workflows/codeql-analysis.yml/badge.svg?branch=main)](https://github.com/InfamyStudio/lostArkAntiAFKBot/actions/workflows/codeql-analysis.yml)
 # Lost Ark Anti AFK Bot
 To tackle the issue of long queue times and harsh AFK timers I have created an Anti AFK Bot For Lost ARK
 
