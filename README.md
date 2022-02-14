@@ -1,6 +1,10 @@
 # Lost Ark Anti AFK Bot
 To tackle the issue of long queue times and harsh AFK timers I have created an Anti AFK Bot For Lost ARK
 
+# Important Note
+There is no known fact that EAC has an issue with CLI (Command Line Interfaces) being open when in a game
+It is up to you if you choose to run the program!
+
 # Latest Release
 - Currently [V1.0](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.0) is the latest release available!
 - Released Source Code Of Project
