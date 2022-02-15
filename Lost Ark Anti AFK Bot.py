@@ -1,8 +1,12 @@
 import time
 import pyautogui
-
+import pytesseract
+import os
+user = os.environ.get('USERNAME')
+tesseractpath = 'C:/Users/' + user + '/AppData/Local/Programs/Tesseract-OCR/tesseract.exe'
+from PIL import Image
+pytesseract.pytesseract.tesseract_cmd = tesseractpath
 from random import randint
-
 
 def ScreenSetup():
     res = pyautogui.size()
@@ -36,12 +40,24 @@ def ScreenSetup():
         randomxtop = 1676
         randomybot = 191
         randomytop = 957
+    elif str(res) == "Size(width=3440, height=1440)":
+        print("Using 3440x1440, Changing Randomx and Randomy")
+        randomxbot = 500
+        randomxtop = 2900
+        randomybot = 220
+        randomytop = 1173
     elif str(res) == "Size(width=3840, height=2160)":
         print("Using 3840x2160, Changing Randomx and Randomy")
-        randomxbot = 744
+        randomxbot = 572
         randomxtop = 3084
         randomybot = 286
         randomytop = 1759
+    elif str(res) == "Size(width=5120, height=1440)":
+        print("Using 5120x1440, Changing Randomx and Randomy")
+        randomxbot = 744
+        randomxtop = 4009
+        randomybot = 220
+        randomytop = 1173
     elif str(res) == "Size(width=7680, height=4320)":
         print("Using 7680x4320, Changing Randomx and Randomy")
         randomxbot = 1488
@@ -125,26 +141,37 @@ def ButtonSetup():
                         print("Type Error: You Have Entered An Incorrect Type! Please Enter An Integer")
                 break
             elif menuCheck == "n":
+                amountToAppendCheck = 0
                 break
             else:
                 print("Input Error: Please Enter Either Y or N")
         except ValueError:
             print("Type Error: You Have Entered An Incorrect Type! Please Enter Either Y or N")
-    return ButtonClickList
+    return ButtonClickList,amountToAppendCheck
 
 def ButtonClick(buttonSetup):
-    ButtonClickList = buttonSetup
-    RandomButtonChoice = randint(0,7)
+    ButtonClickList = buttonSetup[0]
+    ButtonClickTop = buttonSetup[1] + 7
+    print(str(ButtonClickTop))
+    RandomButtonChoice = randint(0,ButtonClickTop)
     ButtonClick = ButtonClickList[RandomButtonChoice]
     pyautogui.press(ButtonClick)
     print("Button Clicked: " + ButtonClick)
 
-'''
 def QueueDetection():
-    queueDetectionScreenshot = pyautogui.screenshot(region=(771,435, 373, 204))
-    queueDetectionScreenshot.save(r"queueDetectionScreenshot.png")
-    print("Screenshot Taken")
-'''
+    while True:
+        queueDetectionScreenshot = pyautogui.screenshot(region=(771,435, 373, 204))
+        queueDetectionScreenshot.save(r"queueDetectionScreenshot.png")
+        path = 'queueDetectionScreenshot.png'
+        print("Lost Ark Screen Being Analysed")
+        queueDetect = pytesseract.image_to_string(Image.open(path))
+        if 'Waiting' in queueDetect:
+            print("Still in Queue :(")
+            print("~Waiting 10 Seconds To Reanylse Screen!")
+            print("Sit Tight!")
+            time.sleep(10)
+        else:
+            break
 
 if __name__ == "__main__":
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
@@ -153,13 +180,13 @@ if __name__ == "__main__":
     time.sleep(2)
     buttonSetup = ButtonSetup()
     print("The Button Click List Is: ")
-    print(buttonSetup)
+    print(buttonSetup[0])
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     time.sleep(2)
     timeSleepSettings = TimeSetup()
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-    #QueueDetection()
-    #print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    QueueDetection()
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     while True:
         TimeSleep(timeSleepSettings)  
         MouseClick(retScreenSize)
