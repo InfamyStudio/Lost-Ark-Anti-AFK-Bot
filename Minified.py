@@ -1,3 +1,6 @@
+b=')'
+a=','
+Z='Mouse Clicked At: ('
 N=ValueError
 M=int
 G='~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
@@ -42,7 +45,7 @@ def R():
 def S(userTimeSettings):A=userTimeSettings;B=D(A[0],A[1]);return B
 def J(timeSleepSettings):E=timeSleepSettings;D=S(E);A('Next Interaction Time: '+B(D)+' second(s) or '+B(D//60)+' minute(s) (Integer Division Not Accurate Minute Representation)!');C.sleep(D)
 def T(resScreenSize):A=resScreenSize;B=D(A[0],A[1]);C=D(A[2],A[3]);return B,C
-def U(retScreenSize):F=retScreenSize;C=T(F);D=C[0];E=C[1];H.moveTo(D,E);H.click();A('Mouse Clicked At: ('+B(D)+','+B(E)+')')
+def U(retScreenSize):F=retScreenSize;C=T(F);D=C[0];E=C[1];H.moveTo(D,E);H.click();A(Z+B(D)+a+B(E)+b)
 def V():
 	C=['q','w','e','r','a','s','d','f'];A('The Default Button Click List Is:');A(C)
 	while F:
@@ -62,11 +65,11 @@ def V():
 	return C,D
 def W(buttonSetup):C=buttonSetup;G=C[0];E=C[1]+7;A(B(E));I=D(0,E);F=G[I];H.press(F);A('Button Clicked: '+F)
 def X():
-	G='queueDetectionScreenshot.png'
+	L='queueDetectionScreenshot.png'
 	while F:
-		B=H.screenshot(region=(771,435,373,204));B.save(G);D=G;A('Lost Ark Screen Being Analysed');E=I.image_to_string(Image.open(D))
-		if'Waiting'in E:A('Still in Queue :(');A('~Waiting 10 Seconds To Reanylse Screen!');A('Sit Tight!');C.sleep(10)
-		else:break
+		G=H.screenshot(region=(771,435,373,204));G.save(L);J=L;A('Lost Ark Screen Being Analysed');K=I.image_to_string(Image.open(J))
+		if'Waiting'in K:A('Still in Queue :(');A('~Waiting 10 Seconds To Reanylse Screen!');A('Sit Tight!');C.sleep(10)
+		else:D=855;E=1014;A('Out of Queue! :)');A('Waiting 60 seconds to launch your character!');C.sleep(60);H.moveTo(D,E);H.click();A(Z+B(D)+a+B(E)+b);A('Character Launch In Progress!');A('30 Second Wait Time!');C.sleep(30);break
 if __name__=='__main__':
 	A(G);Y=Q();A(G);C.sleep(2);K=V();A('The Button Click List Is: ');A(K[0]);A(G);C.sleep(2);L=R();A(G);X();A(G)
 	while F:J(L);U(Y);J(L);W(K)

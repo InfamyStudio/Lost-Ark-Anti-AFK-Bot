@@ -7,15 +7,17 @@ To tackle the issue of long queue times and harsh AFK timers I have created an A
 ## -Allows you to change the default click list of buttons to randomise your session!
 ## -Allows you to set shortest/longest amount of time bot randomises between!
 ## -Major Release Feature (Queue Detection System (Supported 1920x1080 ~ May work on the rest(Untested on other resolutions!)))
+## -Auto Launches Character For You!
 
 # Important Notice:
 There is no known fact that EAC has an issue with CLI (Command Line Interfaces) being open when in a game
 It is up to you if you choose to run the program!
 
 # Latest Release:
-- Currently [V2.0](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.0) is the latest release available!
+- Currently [V2.1](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.1) is the latest release available!
 - Incorporated Queue Detection for Lost Ark. Currently working on 1920x1080 and may work for all others (untested on other resolutions)
 - Please raise an issue for your resolution for queue detection as I will need help collating information!
+- Added Support For Launch Character!
 
 # Usage:
 ## Usage ~ About:
@@ -39,6 +41,7 @@ It is up to you if you choose to run the program!
 - The program runs indefinitely until closed and be careful not to run the program e.g. just on your desktop
 
 # Release History:
+- [V2.1](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.1) (Major Release(Patch))
 - [V2.0](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.0) (Major Release)
 - [V1.4](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.4) (Supported)
 - [V1.3](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.3) (Supported)

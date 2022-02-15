@@ -171,6 +171,17 @@ def QueueDetection():
             print("Sit Tight!")
             time.sleep(10)
         else:
+            launchx = 855
+            launchy = 1014
+            print("Out of Queue! :)")
+            print("Waiting 60 seconds to launch your character!")
+            time.sleep(60)
+            pyautogui.moveTo(launchx,launchy)
+            pyautogui.click()
+            print("Mouse Clicked At: (" + str(launchx) + "," + str(launchy) + ")")
+            print("Character Launch In Progress!")
+            print("30 Second Wait Time!")
+            time.sleep(30)
             break
 
 if __name__ == "__main__":
