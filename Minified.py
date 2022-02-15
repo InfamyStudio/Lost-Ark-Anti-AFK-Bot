@@ -9,10 +9,10 @@ import time as E,pyautogui as H
 from random import randint as C
 def N():
 	G=H.size()
-	if B(G)=='Size(width=640, height=480)':A('Using 640x480, Changing Randomx and Randomy');C=286.5;D=351;E=135;F=301
+	if B(G)=='Size(width=640, height=480)':A('Using 640x480, Changing Randomx and Randomy');C=286;D=351;E=135;F=301
 	elif B(G)=='Size(width=1280, height=720)':A('Using 1280x720, Changing Randomx and Randomy');C=573;D=702;E=271;F=602
 	elif B(G)=='Size(width=1920, height=1080)':A('Using 1920x1080, Changing Randomx and Randomy');C=382;D=1582;E=181;F=903
-	elif B(G)=='Size(width=2560, height=1440)':A('Using 2560x1440, Changing Randomx and Randomy');C=496;D=2056;E=235.3;F=1173.9
+	elif B(G)=='Size(width=2560, height=1440)':A('Using 2560x1440, Changing Randomx and Randomy');C=496;D=2056;E=235;F=1173
 	elif B(G)=='Size(width=2048, height=1080)':A('Using 2048x1080, Changing Randomx and Randomy');C=404;D=1676;E=191;F=957
 	elif B(G)=='Size(width=3840, height=2160)':A('Using 3840x2160, Changing Randomx and Randomy');C=744;D=3084;E=286;F=1759
 	elif B(G)=='Size(width=7680, height=4320)':A('Using 7680x4320, Changing Randomx and Randomy');C=1488;D=6168;E=572;F=3518
