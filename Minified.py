@@ -34,7 +34,7 @@ def O():
 		except M:A('Invalid Entry: Usage Just Type an Integer e.g. 30')
 	return B,C
 def P(userTimeSettings):A=userTimeSettings;B=C(A[0],A[1]);return B
-def I(timeSleepSettings):D=timeSleepSettings;C=P(D);A('Time Waiting Before Next Interaction: '+B(C)+' second(s) or '+B(C/60)+' minute(s)!');E.sleep(C)
+def I(timeSleepSettings):D=timeSleepSettings;C=P(D);A('Next Interaction Time: '+B(C)+' second(s) or '+B(C//60)+' minute(s) (Integer Division Not Accurate Minute Representation)!');E.sleep(C)
 def Q(resScreenSize):A=resScreenSize;B=C(A[0],A[1]);D=C(A[2],A[3]);return B,D
 def R(retScreenSize):F=retScreenSize;C=Q(F);D=C[0];E=C[1];H.moveTo(D,E);H.click();A('Mouse Clicked At: ('+B(D)+','+B(E)+')')
 def S():

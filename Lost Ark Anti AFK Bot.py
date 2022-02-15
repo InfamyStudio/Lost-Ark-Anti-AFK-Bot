@@ -88,7 +88,7 @@ def RandomTimeGen(userTimeSettings):
 def TimeSleep(timeSleepSettings):
         userTimeSettings = timeSleepSettings
         timeWait = RandomTimeGen(userTimeSettings)
-        print("Time Waiting Before Next Interaction: " + str(timeWait) + " second(s) or " + str(timeWait/60) + " minute(s)!")
+        print("Next Interaction Time: " + str(timeWait) + " second(s) or " + str(timeWait // 60) + " minute(s) (Integer Division Not Accurate Minute Representation)!")
         time.sleep(timeWait)
 
 def RandomLocationGen(resScreenSize):
@@ -139,6 +139,13 @@ def ButtonClick(buttonSetup):
     pyautogui.press(ButtonClick)
     print("Button Clicked: " + ButtonClick)
 
+'''
+def QueueDetection():
+    queueDetectionScreenshot = pyautogui.screenshot(region=(771,435, 373, 204))
+    queueDetectionScreenshot.save(r"queueDetectionScreenshot.png")
+    print("Screenshot Taken")
+'''
+
 if __name__ == "__main__":
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     retScreenSize = ScreenSetup()
@@ -151,6 +158,8 @@ if __name__ == "__main__":
     time.sleep(2)
     timeSleepSettings = TimeSetup()
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    #QueueDetection()
+    #print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     while True:
         TimeSleep(timeSleepSettings)  
         MouseClick(retScreenSize)

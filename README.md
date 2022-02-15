@@ -7,12 +7,9 @@ There is no known fact that EAC has an issue with CLI (Command Line Interfaces) 
 It is up to you if you choose to run the program!
 
 # Latest Release
-- Currently [V1.2](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.2) is the latest release available!
-- Added user input for keys for the bot to click
-- Fixed a few bugs and bot crash vectors on input
-- Changed CLI Interface to make it easier to read
-- Updated Minified to new source code
-- Update Obfuscated to new source code
+- Currently [V1.3](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.3) is the latest release available!
+- Fixed Integer Division Bug on timings,
+- prepping code for Queue Detection System also V1.4 Being Released Very Soon!
 
 # Usage
 ## Usage ~ About
@@ -33,6 +30,7 @@ It is up to you if you choose to run the program!
 - The program runs indefinitely until closed and be careful not to run the program e.g. just on your desktop
 
 # Release History
+- [V1.3](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.3)
 - [V1.2](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.2)
 - [V1.1](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.1)
 - [V1.0](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.0)
