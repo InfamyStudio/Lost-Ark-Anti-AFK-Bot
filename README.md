@@ -7,8 +7,8 @@ There is no known fact that EAC has an issue with CLI (Command Line Interfaces) 
 It is up to you if you choose to run the program!
 
 # Latest Release
-- Currently [V1.3](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.3) is the latest release available!
-- Fixed Integer Division Bug on timings,
+- Currently [V1.4](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.4) is the latest release available!
+- Fixed Screen Res issue for float values
 - prepping code for Queue Detection System also V1.4 Being Released Very Soon!
 
 # Usage
@@ -30,6 +30,7 @@ It is up to you if you choose to run the program!
 - The program runs indefinitely until closed and be careful not to run the program e.g. just on your desktop
 
 # Release History
+- [V1.4](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.4)
 - [V1.3](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.3)
 - [V1.2](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.2)
 - [V1.1](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.1)
