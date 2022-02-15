@@ -8,7 +8,7 @@ def ScreenSetup():
     res = pyautogui.size()
     if str(res) == "Size(width=640, height=480)":
         print("Using 640x480, Changing Randomx and Randomy")
-        randomxbot = 286.5
+        randomxbot = 286
         randomxtop = 351
         randomybot = 135
         randomytop = 301
@@ -28,8 +28,8 @@ def ScreenSetup():
         print("Using 2560x1440, Changing Randomx and Randomy")
         randomxbot = 496
         randomxtop = 2056
-        randomybot = 235.3
-        randomytop = 1173.9
+        randomybot = 235
+        randomytop = 1173
     elif str(res) == "Size(width=2048, height=1080)":
         print("Using 2048x1080, Changing Randomx and Randomy")
         randomxbot = 404
