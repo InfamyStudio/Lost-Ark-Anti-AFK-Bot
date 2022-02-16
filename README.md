@@ -3,11 +3,11 @@
 To tackle the issue of long queue times and harsh AFK timers I have created an Anti AFK Bot For Lost ARK
 
 # Feature Set:
-## -Automatic Screen Resolution Detection (Changes Bot Click Area To Your Resolution!)
-## -Allows you to change the default click list of buttons to randomise your session!
-## -Allows you to set shortest/longest amount of time bot randomises between!
-## -Major Release Feature (Queue Detection System (Supported 1920x1080 ~ May work on the rest(Untested on other resolutions!)))
-## -Auto Launches Character For You!
+-Automatic Screen Resolution Detection (Changes Bot Click Area To Your Resolution!)
+-Allows you to change the default click list of buttons to randomise your session!
+-Allows you to set shortest/longest amount of time bot randomises between!
+-Major Release Feature (Queue Detection System (Supported 1920x1080 ~ May work on the rest(Untested on other resolutions!)))
+-Auto Launches Character For You!
 
 # Important Notice:
 There is no known fact that EAC has an issue with CLI (Command Line Interfaces) being open when in a game
@@ -36,7 +36,7 @@ It is up to you if you choose to run the program!
 ## Usage ~ Program Run time:
 - The system starts off with a mouse click at a random screen location cords within the clickable area of the game
 - The system then presses a key which is randomly selected from the Buttons List (Either Default Or Custom)
-- The system runs 30-120 seconds random time selection between each event
+- The system runs 30-1200 seconds random time selection between each event
 - The systems selects a random screen coordinate to click every time
 - The system selects a random key button every time of the array of "usable" buttons
 - The program runs indefinitely until closed and be careful not to run the program e.g. just on your desktop
