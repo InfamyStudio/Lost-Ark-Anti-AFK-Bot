@@ -160,40 +160,62 @@ def ButtonClick(buttonSetup):
 
 def QueueDetection():
     while True:
-        queueDetectionScreenshot = pyautogui.screenshot(region=(771,435, 373, 204))
-        queueDetectionScreenshot.save(r"queueDetectionScreenshot.png")
-        path = 'queueDetectionScreenshot.png'
-        print("Lost Ark Screen Being Analysed")
-        queueDetect = pytesseract.image_to_string(Image.open(path))
-        if 'Waiting' in queueDetect:
-            print("Still in Queue :(")
-            print("~Waiting 10 Seconds To Reanylse Screen!")
-            print("Sit Tight!")
-            time.sleep(10)
-        else:
-            launchx = 855
-            launchy = 1014
-            print("Out of Queue! :)")
-            print("Waiting 60 seconds to launch your character!")
-            time.sleep(60)
-            pyautogui.moveTo(launchx,launchy)
-            pyautogui.click()
-            print("Mouse Clicked At: (" + str(launchx) + "," + str(launchy) + ")")
-            print("Character Launch In Progress!")
-            print("30 Second Wait Time!")
-            time.sleep(30)
-            break
+        try:
+            print("Make Sure Nothing is covering your lost ark window, specifficaly the Queue Box!")
+            menuCheck = str(input("Would You Like To Start Queue Detection? Enter (Y) or (N): ")).lower()
+            if menuCheck == "y":
+                    try:
+                        while True:
+                            queueDetectionScreenshot = pyautogui.screenshot(region=(771,435, 373, 204))
+                            queueDetectionScreenshot.save(r"queueDetectionScreenshot.png")
+                            path = 'queueDetectionScreenshot.png'
+                            print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+                            print("Lost Ark Screen Being Analysed")
+                            time.sleep(1)
+                            queueDetect = pytesseract.image_to_string(Image.open(path))
+                            if 'Waiting' in queueDetect:
+                                print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+                                print("Still in Queue :(")
+                                print("~Waiting 10 Seconds To Reanylse Screen!")
+                                print("Sit Tight!")
+                                print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+                                time.sleep(9)
+                            else:
+                                launchx = 855
+                                launchy = 1014
+                                print("Out of Queue! :)")
+                                print("Waiting 60 seconds to launch your character!")
+                                print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+                                time.sleep(60)
+                                pyautogui.moveTo(launchx,launchy)
+                                pyautogui.click()
+                                print("Mouse Clicked At: (" + str(launchx) + "," + str(launchy) + ")")
+                                print("Character Launch In Progress!")
+                                print("30 Second Wait Time!")
+                                time.sleep(30)
+                                break
+                        break
+                    except ValueError:
+                        print("Type Error: You Have Entered An Incorrect Type! Please Enter An Integer")
+            elif menuCheck == "n":
+                break
+            else:
+                print("Input Error: Please Enter Either Y or N")
+        except ValueError:
+            print("Type Error: You Have Entered An Incorrect Type! Please Enter Either Y or N")
+    
 
 if __name__ == "__main__":
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     retScreenSize = ScreenSetup()
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-    time.sleep(2)
+    time.sleep(1)
     buttonSetup = ButtonSetup()
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     print("The Button Click List Is: ")
     print(buttonSetup[0])
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-    time.sleep(2)
+    time.sleep(1)
     timeSleepSettings = TimeSetup()
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     QueueDetection()

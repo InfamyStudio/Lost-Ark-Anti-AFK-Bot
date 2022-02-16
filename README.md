@@ -14,10 +14,11 @@ There is no known fact that EAC has an issue with CLI (Command Line Interfaces) 
 It is up to you if you choose to run the program!
 
 # Latest Release:
-- Currently [V2.1](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.1) is the latest release available!
+- Currently [V2.2](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.2) is the latest release available!
 - Incorporated Queue Detection for Lost Ark. Currently working on 1920x1080 and may work for all others (untested on other resolutions)
 - Please raise an issue for your resolution for queue detection as I will need help collating information!
 - Added Support For Launch Character!
+- Added option to select Queue detection or not!
 
 # Usage:
 ## Usage ~ About:
@@ -41,10 +42,11 @@ It is up to you if you choose to run the program!
 - The program runs indefinitely until closed and be careful not to run the program e.g. just on your desktop
 
 # Release History:
+- [V2.2](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.2) (Major Release(Patch))
 - [V2.1](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.1) (Major Release(Patch))
 - [V2.0](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.0) (Major Release)
-- [V1.4](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.4) (Supported)
-- [V1.3](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.3) (Supported)
+- [V1.4](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.4) (Unsupported)
+- [V1.3](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.3) (Unsupported)
 - [V1.2](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.2) (Unsupported)
 - [V1.1](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.1) (Unsupported)
 - [V1.0](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.0) (Unsupported)
@@ -66,9 +68,9 @@ It is up to you if you choose to run the program!
 - Use at your own discretion!
 
 ## Plans for the future:
-- EAC Bypass
-- Create the program in multiple languages and different executables
-- Possibly expand this project into a bot that interacts with the game better
+- Add Requirements .txt
+- Redo README.MD
+- Wait for feedback of Queue detection and resolve any issues!
 
 ## Plans Completed:
 - Add Queue detection (program only starts clicking etc when in game and not in Queue) (Done)

@@ -1,19 +1,24 @@
+g='Type Error: You Have Entered An Incorrect Type! Please Enter Either Y or N'
+f='Input Error: Please Enter Either Y or N'
+e='n'
+d='Type Error: You Have Entered An Incorrect Type! Please Enter An Integer'
+c='y'
 b=')'
 a=','
 Z='Mouse Clicked At: ('
-N=ValueError
-M=int
-G='~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
+N=int
+I=ValueError
 F=True
 E=input
+C='~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
 B=str
 A=print
-import time as C,pyautogui as H,pytesseract as I,os
+import time as D,pyautogui as H,pytesseract as J,os
 O=os.environ.get('USERNAME')
 P='C:/Users/'+O+'/AppData/Local/Programs/Tesseract-OCR/tesseract.exe'
 from PIL import Image
-I.pytesseract.tesseract_cmd=P
-from random import randint as D
+J.pytesseract.tesseract_cmd=P
+from random import randint as G
 def Q():
 	G=H.size()
 	if B(G)=='Size(width=640, height=480)':A('Using 640x480, Changing Randomx and Randomy');C=286;D=351;E=135;F=301
@@ -31,45 +36,55 @@ def R():
 	G='This is to large of a time input!';D='Must Type an Integer > 0';A('Usage Just Type an Integer e.g. 30')
 	while F:
 		try:
-			B=M(E('Please Enter The Shortest Amount of Seconds To Wait Before Input - Recommended (30 seconds): '))
+			B=N(E('Please Enter The Shortest Amount of Seconds To Wait Before Input - Recommended (30 seconds): '))
 			if B<=0:A(D)
 			elif B>=4294967:A(G)
 			else:
-				C=M(E('Please Enter The Longest Amount of Seconds To Wait Before Input - Recommended (1200 seconds): '))
+				C=N(E('Please Enter The Longest Amount of Seconds To Wait Before Input - Recommended (1200 seconds): '))
 				if C<=0:A(D)
 				elif C<=B:A('This should be not equal to or larger then the lowest amount in range')
 				elif C>=4294967:A(G)
 				else:break
-		except N:A('Invalid Entry: Usage Just Type an Integer e.g. 30')
+		except I:A('Invalid Entry: Usage Just Type an Integer e.g. 30')
 	return B,C
-def S(userTimeSettings):A=userTimeSettings;B=D(A[0],A[1]);return B
-def J(timeSleepSettings):E=timeSleepSettings;D=S(E);A('Next Interaction Time: '+B(D)+' second(s) or '+B(D//60)+' minute(s) (Integer Division Not Accurate Minute Representation)!');C.sleep(D)
-def T(resScreenSize):A=resScreenSize;B=D(A[0],A[1]);C=D(A[2],A[3]);return B,C
+def S(userTimeSettings):A=userTimeSettings;B=G(A[0],A[1]);return B
+def K(timeSleepSettings):E=timeSleepSettings;C=S(E);A('Next Interaction Time: '+B(C)+' second(s) or '+B(C//60)+' minute(s) (Integer Division Not Accurate Minute Representation)!');D.sleep(C)
+def T(resScreenSize):A=resScreenSize;B=G(A[0],A[1]);C=G(A[2],A[3]);return B,C
 def U(retScreenSize):F=retScreenSize;C=T(F);D=C[0];E=C[1];H.moveTo(D,E);H.click();A(Z+B(D)+a+B(E)+b)
 def V():
 	C=['q','w','e','r','a','s','d','f'];A('The Default Button Click List Is:');A(C)
 	while F:
 		try:
 			G=B(E('Would You Like To Add More Keys To The ButtonClickList? Enter (Y) or (N): ')).lower()
-			if G=='y':
+			if G==c:
 				while F:
 					try:
-						D=M(E('How Many Keys Would You Like To Add To The List: '))
-						for I in range(D):H=E("Please Press a Key or Write The Key, Such As 'space' and then press enter: ");C.append(H)
+						D=N(E('How Many Keys Would You Like To Add To The List: '))
+						for J in range(D):H=E("Please Press a Key or Write The Key, Such As 'space' and then press enter: ");C.append(H)
 						break
-					except N:A('Type Error: You Have Entered An Incorrect Type! Please Enter An Integer')
+					except I:A(d)
 				break
-			elif G=='n':D=0;break
-			else:A('Input Error: Please Enter Either Y or N')
-		except N:A('Type Error: You Have Entered An Incorrect Type! Please Enter Either Y or N')
+			elif G==e:D=0;break
+			else:A(f)
+		except I:A(g)
 	return C,D
-def W(buttonSetup):C=buttonSetup;G=C[0];E=C[1]+7;A(B(E));I=D(0,E);F=G[I];H.press(F);A('Button Clicked: '+F)
+def W(buttonSetup):C=buttonSetup;F=C[0];D=C[1]+7;A(B(D));I=G(0,D);E=F[I];H.press(E);A('Button Clicked: '+E)
 def X():
-	L='queueDetectionScreenshot.png'
+	P='queueDetectionScreenshot.png'
 	while F:
-		G=H.screenshot(region=(771,435,373,204));G.save(L);J=L;A('Lost Ark Screen Being Analysed');K=I.image_to_string(Image.open(J))
-		if'Waiting'in K:A('Still in Queue :(');A('~Waiting 10 Seconds To Reanylse Screen!');A('Sit Tight!');C.sleep(10)
-		else:D=855;E=1014;A('Out of Queue! :)');A('Waiting 60 seconds to launch your character!');C.sleep(60);H.moveTo(D,E);H.click();A(Z+B(D)+a+B(E)+b);A('Character Launch In Progress!');A('30 Second Wait Time!');C.sleep(30);break
+		try:
+			A('Make Sure Nothing is covering your lost ark window, specifficaly the Queue Box!');G=B(E('Would You Like To Start Queue Detection? Enter (Y) or (N): ')).lower()
+			if G==c:
+				try:
+					while F:
+						M=H.screenshot(region=(771,435,373,204));M.save(P);N=P;A(C);A('Lost Ark Screen Being Analysed');D.sleep(1);O=J.image_to_string(Image.open(N))
+						if'Waiting'in O:A(C);A('Still in Queue :(');A('~Waiting 10 Seconds To Reanylse Screen!');A('Sit Tight!');A(C);D.sleep(9)
+						else:K=855;L=1014;A('Out of Queue! :)');A('Waiting 60 seconds to launch your character!');A(C);D.sleep(60);H.moveTo(K,L);H.click();A(Z+B(K)+a+B(L)+b);A('Character Launch In Progress!');A('30 Second Wait Time!');D.sleep(30);break
+					break
+				except I:A(d)
+			elif G==e:break
+			else:A(f)
+		except I:A(g)
 if __name__=='__main__':
-	A(G);Y=Q();A(G);C.sleep(2);K=V();A('The Button Click List Is: ');A(K[0]);A(G);C.sleep(2);L=R();A(G);X();A(G)
-	while F:J(L);U(Y);J(L);W(K)
+	A(C);Y=Q();A(C);D.sleep(1);L=V();A(C);A('The Button Click List Is: ');A(L[0]);A(C);D.sleep(1);M=R();A(C);X();A(C)
+	while F:K(M);U(Y);K(M);W(L)
