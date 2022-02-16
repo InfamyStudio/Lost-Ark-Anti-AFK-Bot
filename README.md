@@ -20,6 +20,19 @@ It is up to you if you choose to run the program!
 - Added Support For Launch Character!
 - Added option to select Queue detection or not!
 
+## Setup:
+1) Firstly Install Python and make sure to install the package manager PIP (Do This In Admin Privileges in CMD etc)
+2) Copy and past the commands below into your terminal. This will install the Open Source packages needed to run the program.
+```
+pip install pyautogui
+pip install tesseract
+pip install pytesseract
+```
+3) Make Sure To Install Either 64bit or 32bit for your machine: [Tesseract Windows Installer](https://github.com/UB-Mannheim/tesseract/wiki)
+4) Make sure the path for the above installation is saved to this location or program will not work ('C:/Users/"YOURUSER"/AppData/Local/Programs/Tesseract-OCR/tesseract.exe')
+5) Now move the program into another drive preferably from the game and rename it to you choosing (bury this in a few random files)
+6) Enjoy usage!
+
 # Usage:
 ## Usage ~ About:
 - I recommend using the obfuscated version of the project nicknamed "Obfuscated.py"
@@ -50,15 +63,6 @@ It is up to you if you choose to run the program!
 - [V1.2](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.2) (Unsupported)
 - [V1.1](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.1) (Unsupported)
 - [V1.0](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.0) (Unsupported)
-
-## Setup:
-1) Firstly Install Python and make sure to install the package manager PIP (Do This In Admin Privileges in CMD etc)
-2) Next in CMD run "pip install pyautogui" (Dependency Installation)
-3) Next in CMD run "pip install tesseract and pip install pytesseract" (Dependency Installation)
-4) Make Sure To Install Either 64bit or 32bit for your machine: [Tesseract Windows Installer](https://github.com/UB-Mannheim/tesseract/wiki)
-5) Make sure the path for the above installation is saved to this location or program will not work ('C:/Users/"YOURUSER"/AppData/Local/Programs/Tesseract-OCR/tesseract.exe')
-6) Now move the program into another drive preferably from the game and rename it to you choosing (bury this in a few random files)
-7) Enjoy usage
 
 ## About:
 - Built this program for a friend and the program currently is fully undetected and ready to go
