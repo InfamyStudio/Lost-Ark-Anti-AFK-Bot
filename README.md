@@ -16,7 +16,7 @@ It is up to you if you choose to run the program!
 
 # Latest Release:
 - Currently [V2.3](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.3) is the latest release available!
-- Updated Queue Detection to support a few more langauges - please raise an issue for your language!
+- Updated Queue Detection to support a few more languages - please raise an issue for your language!
 
 ## Setup:
 1) Firstly Install Python and make sure to install the package manager PIP (Do This In Admin Privileges in CMD etc)
