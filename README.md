@@ -15,8 +15,9 @@ There is no known fact that EAC has an issue with CLI (Command Line Interfaces) 
 It is up to you if you choose to run the program!
 
 # Latest Release:
-- Currently [V2.3](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.3) is the latest release available!
+- Currently [V2.4](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.4) is the latest release available!
 - Updated Queue Detection to support a few more languages - please raise an issue for your language!
+- Fixed "7" Bug being output to console window (facepalm)
 
 ## Setup:
 1) Firstly Install Python and make sure to install the package manager PIP (Do This In Admin Privileges in CMD etc)
@@ -53,9 +54,10 @@ pip install pytesseract
 - The program runs indefinitely until closed and be careful not to run the program e.g. just on your desktop
 
 # Release History:
+- [V2.4](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.4) (Major Release(Patch))
 - [V2.3](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.3) (Major Release(Patch))
 - [V2.2](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.2) (Major Release(Patch))
-- [V2.1](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.1) (Major Release(Patch))
+- [V2.1](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.1) (Unsupported)
 - [V2.0](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.0) (Unsupported)
 - [V1.4](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.4) (Unsupported)
 - [V1.3](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.3) (Unsupported)

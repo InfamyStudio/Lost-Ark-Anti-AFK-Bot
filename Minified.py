@@ -68,7 +68,7 @@ def V():
 			else:A(f)
 		except L:A(g)
 	return B,D
-def W(buttonSetup):B=buttonSetup;G=B[0];D=B[1]+7;A(C(D));I=E(0,D);F=G[I];H.press(F);A('Button Clicked: '+F)
+def W(buttonSetup):B=buttonSetup;D=B[0];F=B[1]+7;G=E(0,F);C=D[G];H.press(C);A('Button Clicked: '+C)
 def X():
 	S='queueDetectionScreenshot.png';K='Sit Tight!';J='~Waiting 10 Seconds To Reanylse Screen!';I='Still in Queue :('
 	while G:

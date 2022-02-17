@@ -152,7 +152,6 @@ def ButtonSetup():
 def ButtonClick(buttonSetup):
     ButtonClickList = buttonSetup[0]
     ButtonClickTop = buttonSetup[1] + 7
-    print(str(ButtonClickTop))
     RandomButtonChoice = randint(0,ButtonClickTop)
     ButtonClick = ButtonClickList[RandomButtonChoice]
     pyautogui.press(ButtonClick)
