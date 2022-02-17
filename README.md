@@ -6,7 +6,8 @@ To tackle the issue of long queue times and harsh AFK timers I have created an A
 - Automatic Screen Resolution Detection (Changes Bot Click Area To Your Resolution!)
 - Allows you to change the default click list of buttons to randomise your session!
 - Allows you to set shortest/longest amount of time bot randomises between!
-- Major Release Feature (Queue Detection System (Supported 1920x1080 ~ May work on the rest(Untested on other resolutions!)))
+- Queue Detection - Screen Resolutions Supported For Queue Detection: (1920x1080)
+- Queue Detection - Languages Supported For Queue Detection: (English,German,French,Italian,Turkish,Danish)
 - Auto Launches Character For You!
 
 # Important Notice:
@@ -14,15 +15,12 @@ There is no known fact that EAC has an issue with CLI (Command Line Interfaces) 
 It is up to you if you choose to run the program!
 
 # Latest Release:
-- Currently [V2.2](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.2) is the latest release available!
-- Incorporated Queue Detection for Lost Ark. Currently working on 1920x1080 and may work for all others (untested on other resolutions)
-- Please raise an issue for your resolution for queue detection as I will need help collating information!
-- Added Support For Launch Character!
-- Added option to select Queue detection or not!
+- Currently [V2.3](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.3) is the latest release available!
+- Updated Queue Detection to support a few more langauges - please raise an issue for your language!
 
 ## Setup:
 1) Firstly Install Python and make sure to install the package manager PIP (Do This In Admin Privileges in CMD etc)
-2) Copy and past the commands below into your terminal. This will install the Open Source packages needed to run the program.
+2) Copy and paste the commands below into your terminal. This will install the Open Source packages needed to run the program.
 ```
 pip install pyautogui
 pip install tesseract
@@ -55,9 +53,10 @@ pip install pytesseract
 - The program runs indefinitely until closed and be careful not to run the program e.g. just on your desktop
 
 # Release History:
+- [V2.3](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.3) (Major Release(Patch))
 - [V2.2](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.2) (Major Release(Patch))
 - [V2.1](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.1) (Major Release(Patch))
-- [V2.0](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.0) (Major Release)
+- [V2.0](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.0) (Unsupported)
 - [V1.4](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.4) (Unsupported)
 - [V1.3](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.3) (Unsupported)
 - [V1.2](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.2) (Unsupported)

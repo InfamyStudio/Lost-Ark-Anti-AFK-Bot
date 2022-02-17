@@ -173,7 +173,7 @@ def QueueDetection():
                             print("Lost Ark Screen Being Analysed")
                             time.sleep(1)
                             queueDetect = pytesseract.image_to_string(Image.open(path))
-                            if 'Waiting' in queueDetect:
+                            if 'Waiting' or 'Warten' or 'Venter' or 'Attendre' or 'In attesa' or 'Bekleme' in queueDetect:
                                 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
                                 print("Still in Queue :(")
                                 print("~Waiting 10 Seconds To Reanylse Screen!")
