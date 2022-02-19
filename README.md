@@ -6,18 +6,28 @@ To tackle the issue of long queue times and harsh AFK timers I have created an A
 - Automatic Screen Resolution Detection (Changes Bot Click Area To Your Resolution!)
 - Allows you to change the default click list of buttons to randomise your session!
 - Allows you to set shortest/longest amount of time bot randomises between!
-- Queue Detection - Screen Resolutions Supported For Queue Detection: (1920x1080)
+- Queue Detection - Screen Resolutions Supported For Queue Detection: (1920x1080,2560x1080) - Rest may work!
 - Queue Detection - Languages Supported For Queue Detection: (English,German,French,Italian,Turkish,Danish)
-- Auto Launches Character For You!
+- Auto Launches Character For You: (1920x1080,2560x1080) - Rest may work!
 
-# Important Notice:
-There is no known fact that EAC has an issue with CLI (Command Line Interfaces) being open when in a game
-It is up to you if you choose to run the program!
+# Want To Help The Project?
+- Currently Queue Detection only has a few supported resolutions. What I need is gathered user data from all screen resolutions.
+- Firstly download and setup https://github.com/mjdarby/ScreenCoordinateHelper
+- Next record the exact cords for the "Waiting for server/queue" Box and record these details as follow:
+```
+- Top Left = Top left of box
+- Top Middle = Top middle of the box
+- Width = The top right which in turn doing Top left minus Top right gives us the width)
+- Height = Top left of the box minus bottom left gives us the height.
+```
+- Please then record the screen coordinates for the centre of the "launch character" box.
+- Lastly raise a GitHub issue with your screen resolution and the above details!
 
 # Latest Release:
-- Currently [V2.4](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.4) is the latest release available!
-- Updated Queue Detection to support a few more languages - please raise an issue for your language!
-- Fixed "7" Bug being output to console window (facepalm)
+- Currently [V2.5](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.5) is the latest release available!
+- Update Queue Detection for more support on resolutions
+- Updated README.md for how to get involved and help out
+- Updated how the program passes information from screen res allowing users to manually change their settings inside of the code
 
 ## Setup:
 1) Firstly Install Python and make sure to install the package manager PIP (Do This In Admin Privileges in CMD etc)
@@ -35,8 +45,9 @@ pip install pytesseract
 # Usage:
 ## Usage ~ About:
 - I recommend using the obfuscated version of the project nicknamed "Obfuscated.py"
-- I recommend changing the name of the program and burying it elsewhere on the file system
-- I recommend going to a private area in Lost Ark and all you would need to do is boot up the program and switch back to Lost Ark
+- This is the fastest and most secure version of the program always
+- You should use this program in a private location only accessible to you such as the Memory Chamber ideally
+- You can change the name of the program and put it anywhere inside your file system to hide it further.
 ## Usage ~ Program Setup:
 - System automatically detects resolution and adjusts config accordingly
 - System asks you if you want to add more Buttons to the Click List
@@ -48,15 +59,16 @@ pip install pytesseract
 ## Usage ~ Program Run time:
 - The system starts off with a mouse click at a random screen location cords within the clickable area of the game
 - The system then presses a key which is randomly selected from the Buttons List (Either Default Or Custom)
-- The system runs 30-1200 seconds random time selection between each event
+- The system executes between mouse clicks and button presses between your random selected time frame
 - The systems selects a random screen coordinate to click every time
 - The system selects a random key button every time of the array of "usable" buttons
 - The program runs indefinitely until closed and be careful not to run the program e.g. just on your desktop
 
 # Release History:
+- [V2.5](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.5) (Major Release(Patch))
 - [V2.4](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.4) (Major Release(Patch))
 - [V2.3](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.3) (Major Release(Patch))
-- [V2.2](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.2) (Major Release(Patch))
+- [V2.2](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.2) (Unsupported)
 - [V2.1](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.1) (Unsupported)
 - [V2.0](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.0) (Unsupported)
 - [V1.4](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.4) (Unsupported)
@@ -65,20 +77,16 @@ pip install pytesseract
 - [V1.1](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.1) (Unsupported)
 - [V1.0](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.0) (Unsupported)
 
+## Plans for the future:
+- Wait for feedback of Queue detection and resolve any issues and add more resolution support!
+- Playing around with windows notifications and discord hooks!
+- Possibly turning into a UI based program or offering both!
+
 ## About:
 - Built this program for a friend and the program currently is fully undetected and ready to go
-- You are free to usage any script type above for example if you do not trust the Minified Code or Obfuscated Code.
+- You can use any version of the program as they are all the same always!
+- You are free to use this code in your own projects and tamper with it as much as you like! If you make any cool changes let me know and I will merge it to main branch!
 - You can also run your own Obfuscation on the source code to better hide the program if you do worry about EAC (Easy Anti Cheat)
 - Currently Macros have no definite answer on bans etc but generic rules state anything that is a bot or left unattended is breaking the rules
-- Use at your own discretion!
+- You are responsible for the usage of the program and anything that happens to your account is on you
 
-## Plans for the future:
-- Add Requirements .txt
-- Redo README.MD
-- Wait for feedback of Queue detection and resolve any issues!
-
-## Plans Completed:
-- Add Queue detection (program only starts clicking etc when in game and not in Queue) (Done)
-- Add custom screen setup for all resolution types (Done)
-- Add user input for selected wait times between inputs (Done)
-- Add user input for selected keys to press (Done)

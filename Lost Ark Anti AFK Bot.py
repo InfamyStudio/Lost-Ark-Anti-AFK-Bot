@@ -11,59 +11,125 @@ from random import randint
 def ScreenSetup():
     res = pyautogui.size()
     if str(res) == "Size(width=640, height=480)":
-        print("Using 640x480, Changing Randomx and Randomy")
+        print("Using 640x480, Setting Randomx and Randomy")
         randomxbot = 286
         randomxtop = 351
         randomybot = 135
         randomytop = 301
+        launchx = 855
+        launchy = 1014
+        scleft = 771
+        sctop = 435
+        scwidth = 373
+        scheight = 204
     elif str(res) == "Size(width=1280, height=720)":
-        print("Using 1280x720, Changing Randomx and Randomy")
+        print("Using 1280x720, Setting Randomx and Randomy")
         randomxbot = 573
         randomxtop = 702
         randomybot = 271
         randomytop = 602
+        launchx = 855
+        launchy = 1014
+        scleft = 771
+        sctop = 435
+        scwidth = 373
+        scheight = 204
     elif str(res) == "Size(width=1920, height=1080)":
-        print("Using 1920x1080, Changing Randomx and Randomy")
+        print("Using 1920x1080, Setting Randomx and Randomy")
         randomxbot = 382
         randomxtop = 1582
         randomybot = 181
         randomytop = 903
+        launchx = 855
+        launchy = 1014
+        scleft = 771
+        sctop = 435
+        scwidth = 373
+        scheight = 204
     elif str(res) == "Size(width=2560, height=1440)":
-        print("Using 2560x1440, Changing Randomx and Randomy")
+        print("Using 2560x1440, Setting Randomx and Randomy")
         randomxbot = 496
         randomxtop = 2056
         randomybot = 235
         randomytop = 1173
+        launchx = 1180
+        launchy = 1014
+        scleft = 1094
+        sctop = 459
+        scwidth = 369
+        scheight = 159
+    elif str(res) == "Size(width=2560, height=1080)":
+        print("Using 2560x1440, Setting Randomx and Randomy")
+        randomxbot = 500
+        randomxtop = 2100
+        randomybot = 181
+        randomytop = 903
+        launchx = 1180
+        launchy = 1014
+        scleft = 1094
+        sctop = 459
+        scwidth = 369
+        scheight = 159
     elif str(res) == "Size(width=2048, height=1080)":
-        print("Using 2048x1080, Changing Randomx and Randomy")
+        print("Using 2048x1080, Setting Randomx and Randomy")
         randomxbot = 404
         randomxtop = 1676
         randomybot = 191
         randomytop = 957
+        launchx = 855
+        launchy = 1014
+        scleft = 771
+        sctop = 435
+        scwidth = 373
+        scheight = 204
     elif str(res) == "Size(width=3440, height=1440)":
-        print("Using 3440x1440, Changing Randomx and Randomy")
+        print("Using 3440x1440, Setting Randomx and Randomy")
         randomxbot = 500
         randomxtop = 2900
         randomybot = 220
         randomytop = 1173
+        launchx = 855
+        launchy = 1014
+        scleft = 771
+        sctop = 435
+        scwidth = 373
+        scheight = 204
     elif str(res) == "Size(width=3840, height=2160)":
-        print("Using 3840x2160, Changing Randomx and Randomy")
+        print("Using 3840x2160, Setting Randomx and Randomy")
         randomxbot = 572
         randomxtop = 3084
         randomybot = 286
         randomytop = 1759
+        launchx = 855
+        launchy = 1014
+        scleft = 771
+        sctop = 435
+        scwidth = 373
+        scheight = 204
     elif str(res) == "Size(width=5120, height=1440)":
-        print("Using 5120x1440, Changing Randomx and Randomy")
+        print("Using 5120x1440, Setting Randomx and Randomy")
         randomxbot = 744
         randomxtop = 4009
         randomybot = 220
         randomytop = 1173
+        launchx = 855
+        launchy = 1014
+        scleft = 771
+        sctop = 435
+        scwidth = 373
+        scheight = 204
     elif str(res) == "Size(width=7680, height=4320)":
-        print("Using 7680x4320, Changing Randomx and Randomy")
+        print("Using 7680x4320, Setting Randomx and Randomy")
         randomxbot = 1488
         randomxtop = 6168
         randomybot = 572
         randomytop = 3518
+        launchx = 855
+        launchy = 1014
+        scleft = 771
+        sctop = 435
+        scwidth = 373
+        scheight = 204
     else:
         print("Using Non-Supported Res, Changing Randomx and Randomy to Default Location!")
         print("Please raise an issue on GitHub with your screen res for future custom support!")
@@ -71,7 +137,13 @@ def ScreenSetup():
         randomxtop = 1582
         randomybot = 181
         randomytop = 903
-    return randomxbot,randomxtop,randomybot,randomytop
+        launchx = 855
+        launchy = 1014
+        scleft = 771
+        sctop = 435
+        scwidth = 373
+        scheight = 204
+    return randomxbot,randomxtop,randomybot,randomytop,launchx,launchy,scleft,sctop,scwidth,scheight
 
 def TimeSetup():
     print("Usage Just Type an Integer e.g. 30")
@@ -157,7 +229,13 @@ def ButtonClick(buttonSetup):
     pyautogui.press(ButtonClick)
     print("Button Clicked: " + ButtonClick)
 
-def QueueDetection():
+def QueueDetection(retScreenSize):
+    launchx = retScreenSize[4]
+    launchy = retScreenSize[5]
+    scleft = retScreenSize[6]
+    sctop = retScreenSize[7]
+    scwidth = retScreenSize[8]
+    scheight = retScreenSize[9]
     while True:
         try:
             print("Make Sure Nothing is covering your lost ark window, specifficaly the Queue Box!")
@@ -165,7 +243,7 @@ def QueueDetection():
             if menuCheck == "y":
                     try:
                         while True:
-                            queueDetectionScreenshot = pyautogui.screenshot(region=(771,435, 373, 204))
+                            queueDetectionScreenshot = pyautogui.screenshot(region=(scleft,sctop,scwidth,scheight))
                             queueDetectionScreenshot.save(r"queueDetectionScreenshot.png")
                             path = 'queueDetectionScreenshot.png'
                             print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
@@ -215,8 +293,7 @@ def QueueDetection():
                                 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
                                 time.sleep(9)
                             else:
-                                launchx = 855
-                                launchy = 1014
+    
                                 print("Out of Queue! :)")
                                 print("Waiting 60 seconds to launch your character!")
                                 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
@@ -252,7 +329,7 @@ if __name__ == "__main__":
     time.sleep(1)
     timeSleepSettings = TimeSetup()
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-    QueueDetection()
+    QueueDetection(retScreenSize)
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     while True:
         TimeSleep(timeSleepSettings)  
