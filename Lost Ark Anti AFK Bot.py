@@ -52,24 +52,24 @@ def ScreenSetup():
         randomxtop = 2056
         randomybot = 235
         randomytop = 1173
-        launchx = 1180
-        launchy = 1014
-        scleft = 1094
-        sctop = 459
-        scwidth = 369
-        scheight = 159
+        launchx = 1135
+        launchy = 1350
+        scleft = 1030
+        sctop = 609
+        scwidth = 496
+        scheight = 220
     elif str(res) == "Size(width=2560, height=1080)":
         print("Using 2560x1440, Setting Randomx and Randomy")
         randomxbot = 500
         randomxtop = 2100
         randomybot = 181
         randomytop = 903
-        launchx = 1180
-        launchy = 1014
-        scleft = 1094
-        sctop = 459
-        scwidth = 369
-        scheight = 159
+        launchx = 1135
+        launchy = 1350
+        scleft = 1030
+        sctop = 609
+        scwidth = 496
+        scheight = 220
     elif str(res) == "Size(width=2048, height=1080)":
         print("Using 2048x1080, Setting Randomx and Randomy")
         randomxbot = 404
@@ -88,12 +88,12 @@ def ScreenSetup():
         randomxtop = 2900
         randomybot = 220
         randomytop = 1173
-        launchx = 855
-        launchy = 1014
-        scleft = 771
-        sctop = 435
-        scwidth = 373
-        scheight = 204
+        launchx = 1720
+        launchy = 716
+        scleft = 1468
+        sctop = 609
+        scwidth = 400
+        scheight = 300
     elif str(res) == "Size(width=3840, height=2160)":
         print("Using 3840x2160, Setting Randomx and Randomy")
         randomxbot = 572

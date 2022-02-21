@@ -24,10 +24,10 @@ def R():
 	if C(M)=='Size(width=640, height=480)':A('Using 640x480, Setting Randomx and Randomy');B=286;D=351;E=135;F=301;G=855;H=1014;I=771;J=435;K=373;L=204
 	elif C(M)=='Size(width=1280, height=720)':A('Using 1280x720, Setting Randomx and Randomy');B=573;D=702;E=271;F=602;G=855;H=1014;I=771;J=435;K=373;L=204
 	elif C(M)=='Size(width=1920, height=1080)':A('Using 1920x1080, Setting Randomx and Randomy');B=382;D=1582;E=181;F=903;G=855;H=1014;I=771;J=435;K=373;L=204
-	elif C(M)=='Size(width=2560, height=1440)':A(O);B=496;D=2056;E=235;F=1173;G=1180;H=1014;I=1094;J=459;K=369;L=159
-	elif C(M)=='Size(width=2560, height=1080)':A(O);B=500;D=2100;E=181;F=903;G=1180;H=1014;I=1094;J=459;K=369;L=159
+	elif C(M)=='Size(width=2560, height=1440)':A(O);B=496;D=2056;E=235;F=1173;G=1135;H=1350;I=1030;J=609;K=496;L=220
+	elif C(M)=='Size(width=2560, height=1080)':A(O);B=500;D=2100;E=181;F=903;G=1135;H=1350;I=1030;J=609;K=496;L=220
 	elif C(M)=='Size(width=2048, height=1080)':A('Using 2048x1080, Setting Randomx and Randomy');B=404;D=1676;E=191;F=957;G=855;H=1014;I=771;J=435;K=373;L=204
-	elif C(M)=='Size(width=3440, height=1440)':A('Using 3440x1440, Setting Randomx and Randomy');B=500;D=2900;E=220;F=1173;G=855;H=1014;I=771;J=435;K=373;L=204
+	elif C(M)=='Size(width=3440, height=1440)':A('Using 3440x1440, Setting Randomx and Randomy');B=500;D=2900;E=220;F=1173;G=1720;H=716;I=1468;J=609;K=400;L=300
 	elif C(M)=='Size(width=3840, height=2160)':A('Using 3840x2160, Setting Randomx and Randomy');B=572;D=3084;E=286;F=1759;G=855;H=1014;I=771;J=435;K=373;L=204
 	elif C(M)=='Size(width=5120, height=1440)':A('Using 5120x1440, Setting Randomx and Randomy');B=744;D=4009;E=220;F=1173;G=855;H=1014;I=771;J=435;K=373;L=204
 	elif C(M)=='Size(width=7680, height=4320)':A('Using 7680x4320, Setting Randomx and Randomy');B=1488;D=6168;E=572;F=3518;G=855;H=1014;I=771;J=435;K=373;L=204
