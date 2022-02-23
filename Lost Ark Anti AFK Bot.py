@@ -106,6 +106,18 @@ def ScreenSetup():
         sctop = 435
         scwidth = 373
         scheight = 204
+    elif str(res) == "Size(width=3840, height=1600)":
+        print("Using 3840x1600, Setting Randomx and Randomy")
+        randomxbot = 590
+        randomxtop = 3320
+        randomybot = 260
+        randomytop = 1350
+        launchx = 1760
+        launchy = 1500
+        scleft = 1642
+        sctop = 676
+        scwidth = 552
+        scheight = 246
     elif str(res) == "Size(width=5120, height=1440)":
         print("Using 5120x1440, Setting Randomx and Randomy")
         randomxbot = 744
