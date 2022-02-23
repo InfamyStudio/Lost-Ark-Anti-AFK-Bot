@@ -29,6 +29,7 @@ def R():
 	elif C(M)=='Size(width=2048, height=1080)':A('Using 2048x1080, Setting Randomx and Randomy');B=404;D=1676;E=191;F=957;G=855;H=1014;I=771;J=435;K=373;L=204
 	elif C(M)=='Size(width=3440, height=1440)':A('Using 3440x1440, Setting Randomx and Randomy');B=500;D=2900;E=220;F=1173;G=1720;H=716;I=1468;J=609;K=400;L=300
 	elif C(M)=='Size(width=3840, height=2160)':A('Using 3840x2160, Setting Randomx and Randomy');B=572;D=3084;E=286;F=1759;G=855;H=1014;I=771;J=435;K=373;L=204
+	elif C(M)=='Size(width=3840, height=1600)':A('Using 3840x1600, Setting Randomx and Randomy');B=590;D=3320;E=260;F=1350;G=1760;H=1500;I=1642;J=676;K=552;L=246
 	elif C(M)=='Size(width=5120, height=1440)':A('Using 5120x1440, Setting Randomx and Randomy');B=744;D=4009;E=220;F=1173;G=855;H=1014;I=771;J=435;K=373;L=204
 	elif C(M)=='Size(width=7680, height=4320)':A('Using 7680x4320, Setting Randomx and Randomy');B=1488;D=6168;E=572;F=3518;G=855;H=1014;I=771;J=435;K=373;L=204
 	else:A('Using Non-Supported Res, Changing Randomx and Randomy to Default Location!');A('Please raise an issue on GitHub with your screen res for future custom support!');B=382;D=1582;E=181;F=903;G=855;H=1014;I=771;J=435;K=373;L=204
