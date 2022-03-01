@@ -5,17 +5,8 @@
 
 | Version | Supported          |
 | ------- | ------------------ |
-| V2.5  | :white_check_mark: |
-| V2.4  | :white_check_mark: |
-| V2.3  | :white_check_mark: |
-| V2.2  | :x: |
-| V2.1  | :x: |
-| V2.0  | :x: |
-| V1.4  | :x: |
-| V1.3  | :x: |
-| V1.2  | :x: |
-| V1.1  | :x: |
-| V1.0  | :x: |
+| V2.8  | :white_check_mark: |
+
 
 ## Reporting a Vulnerability
 
