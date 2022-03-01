@@ -5,9 +5,8 @@ _D='Mouse Clicked At: ('
 _C=None
 _B=True
 _A='~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
-import time,pyautogui,pytesseract,os,win32gui,win32com.client,win32ui
+import time,pyautogui,pytesseract,os,win32gui,win32com.client,win32ui,ctypes
 from ctypes import windll
-import ctypes
 user32=ctypes.windll.user32
 user=os.environ.get('USERNAME')
 tesseractpath='C:/Users/'+user+'/AppData/Local/Programs/Tesseract-OCR/tesseract.exe'
@@ -16,7 +15,7 @@ from PIL import ImageGrab
 pytesseract.pytesseract.tesseract_cmd=tesseractpath
 from random import randint
 LAWindowTitle='LOST ARK (64-bit, DX11) v.2.0.2.1'
-def ScreenSetup():A=LALocation();B=A[0]+round(1920*0.198958);C=A[0]+round(1920*0.823958);D=A[1]+round(1080*0.1675925925925926);E=A[1]+round(1080*0.8361111111111111);F=A[0]+round(1920*0.4453125);G=A[1]+round(1080*0.9388888888888889);H=771;I=435;J=373;K=204;return B,C,D,E,F,G,H,I,J,K
+def ScreenSetup():D=win32gui.FindWindow(_C,LAWindowTitle);E,F,G,H=win32gui.GetWindowRect(D);B=G-E;C=H-F;A=LALocation();I=A[0]+round(B*0.198958);J=A[0]+round(B*0.823958);K=A[1]+round(C*0.1675925925925926);L=A[1]+round(C*0.8361111111111111);M=A[0]+round(B*0.4453125);N=A[1]+round(C*0.9388888888888889);O=round(B*0.4015625);P=round(C*0.4027777777777778);Q=round(B*0.19427083333333334);R=round(C*0.18888888888888888);return I,J,K,L,M,N,O,P,Q,R
 def TimeSetup():
 	D='This is to large of a time input!';C='Must Type an Integer > 0'
 	while _B:
