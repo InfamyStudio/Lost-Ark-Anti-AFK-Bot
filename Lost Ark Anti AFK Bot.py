@@ -89,6 +89,7 @@ def LAForeground():
     shell = win32com.client.Dispatch("WScript.Shell")
     shell.SendKeys('%')
     win32gui.SetForegroundWindow(hwnd)
+    time.sleep(0.5)
     
 def LALocation():
     if LAWindowTitle:
@@ -105,6 +106,7 @@ def LALocation():
 
 def MouseClick(retScreenSize):
     LAForeground()
+    LALocation()
     resScreenSize = retScreenSize
     randomlocval = RandomLocationGen(resScreenSize)
     randomx = randomlocval[0]
@@ -152,6 +154,7 @@ def ButtonClick(buttonSetup):
     print("Button Clicked: " + ButtonClick)
 
 def screenshot(window_title=None):
+    LALocation()
     #Crop Location
     scleft = retScreenSize[6]
     sctop = retScreenSize[7]
