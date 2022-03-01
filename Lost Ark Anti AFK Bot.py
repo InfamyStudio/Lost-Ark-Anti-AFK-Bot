@@ -1,5 +1,6 @@
 import time
 import pyautogui
+import pywinauto
 import pytesseract
 import os
 import win32gui, win32com.client
@@ -14,10 +15,11 @@ from PIL import ImageGrab
 pytesseract.pytesseract.tesseract_cmd = tesseractpath
 from random import randint
 
-LAWindowTitle = "LOST ARK (64-bit, DX11) v.2.0.2.1" 
+LAWindowTitle = "LOST ARK (64-bit, DX11)" 
+hwnd = pywinauto.findwindows.find_window(best_match=LAWindowTitle)
+    
 
 def ScreenSetup():
-    hwnd = win32gui.FindWindow(None, LAWindowTitle)
     left, top, right, bot = win32gui.GetWindowRect(hwnd)
     w = right - left
     h = bot - top
@@ -81,21 +83,17 @@ def RandomLocationGen(resScreenSize):
         randomy = randint(screenSetup[2],screenSetup[3])
         return randomx,randomy
 
+
 def LAForeground():
     #Bring to Foreground
-    hwnd = win32gui.FindWindow(None, LAWindowTitle)
     shell = win32com.client.Dispatch("WScript.Shell")
     shell.SendKeys('%')
     win32gui.SetForegroundWindow(hwnd)
-    #win32gui.ReleaseDC(hwnd)
-
+    
 def LALocation():
     if LAWindowTitle:
-        hwnd = win32gui.FindWindow(None, LAWindowTitle)
-        #print(hwnd)
         if hwnd:
             window_rect = win32gui.GetWindowRect(hwnd)
-            #print(window_rect)
             LAleft = window_rect[0]
             LAtop = window_rect[1]
             LAwidth = window_rect[2] - LAleft
@@ -160,7 +158,6 @@ def screenshot(window_title=None):
     scwidth = scleft + retScreenSize[8] 
     scheight = sctop + retScreenSize[9] 
     #Window Rect
-    hwnd = win32gui.FindWindow(None, LAWindowTitle)
     left, top, right, bot = win32gui.GetWindowRect(hwnd)
     w = right - left
     h = bot - top
@@ -187,6 +184,7 @@ def screenshot(window_title=None):
     saveDC.DeleteDC()
     mfcDC.DeleteDC()
     win32gui.ReleaseDC(hwnd, hwndDC)
+    
 
     im = im.crop((scleft,sctop,scwidth,scheight))
     
