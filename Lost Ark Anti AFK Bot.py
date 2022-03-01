@@ -4,16 +4,8 @@ import pytesseract
 import os
 import win32gui, win32com.client
 import win32ui
-<<<<<<< Updated upstream
-
-from ctypes import windll
-#import Image
-
-import ctypes
-=======
 import ctypes
 from ctypes import windll
->>>>>>> Stashed changes
 user32 = ctypes.windll.user32
 user = os.environ.get('USERNAME')
 tesseractpath = 'C:/Users/' + user + '/AppData/Local/Programs/Tesseract-OCR/tesseract.exe'
@@ -25,19 +17,6 @@ from random import randint
 LAWindowTitle = "LOST ARK (64-bit, DX11) v.2.0.2.1" 
 
 def ScreenSetup():
-<<<<<<< Updated upstream
-    WindowLocation = LALocation()
-    randomxbot = WindowLocation[0] + round(1920*0.198958)
-    randomxtop = WindowLocation[0] + round(1920*0.823958)
-    randomybot = WindowLocation[1] + round(1080*0.16759259259259259)
-    randomytop = WindowLocation[1] + round(1080*0.83611111111111111)
-    launchx = WindowLocation[0] + round(1920*0.4453125)
-    launchy = WindowLocation[1] + round(1080*0.9388888888888888888)
-    scleft = 771
-    sctop = 435
-    scwidth = 373
-    scheight = 204
-=======
     hwnd = win32gui.FindWindow(None, LAWindowTitle)
     left, top, right, bot = win32gui.GetWindowRect(hwnd)
     w = right - left
@@ -55,7 +34,6 @@ def ScreenSetup():
     sctop = round(h*0.40277777777777777777777777777778)
     scwidth = round(w*0.19427083333333333333333333333333)
     scheight = round(h*0.18888888888888888888888888888889)
->>>>>>> Stashed changes
     return randomxbot,randomxtop,randomybot,randomytop,launchx,launchy,scleft,sctop,scwidth,scheight
 
 def TimeSetup():
@@ -282,11 +260,7 @@ def QueueDetection(retScreenSize):
                                 print("Out of Queue! :)")
                                 print("Waiting 60 seconds to launch your character!")
                                 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-<<<<<<< Updated upstream
-                                time.sleep(60)
-=======
                                 time.sleep(60) #60
->>>>>>> Stashed changes
                                 
                                 LAForeground()
 
