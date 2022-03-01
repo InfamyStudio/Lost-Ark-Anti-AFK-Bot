@@ -4,11 +4,10 @@ To tackle the issue of long queue times and harsh AFK timers I have created an A
 
 # Feature Set:
 - Automatic Screen Resolution Detection (Changes Bot Click Area To Your Resolution!)
-- Allows you to change the default click list of buttons to randomise your session!
-- Allows you to set shortest/longest amount of time bot randomises between!
-- Queue Detection - Screen Resolutions Supported For Queue Detection: (1920x1080,2560x1080) - Rest may work!
+- Set shortest(30sec)/longest(1200sec) amount of time bot randomises between!
+- Queue Detection - Screen Resolutions Supported For Queue Detection: (All Widesreen-Resolutions should work) - Rest may work!
 - Queue Detection - Languages Supported For Queue Detection: (English,German,French,Italian,Turkish,Danish)
-- Auto Launches Character For You: (1920x1080,2560x1080) - Rest may work!
+- Auto Launches Character For You: (All Widesreen-Resolutions should work) - Rest may work!
 
 # Want To Help The Project?
 - Currently Queue Detection only has a few supported resolutions. What I need is gathered user data from all screen resolutions.
@@ -24,41 +23,25 @@ To tackle the issue of long queue times and harsh AFK timers I have created an A
 - Lastly raise a GitHub issue with your screen resolution and the above details!
 
 # Latest Release:
-- Currently [V2.5](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.5) is the latest release available!
+- Currently [V2.8](https://github.com/Eaglescream/lostArkAntiAFKBot/releases/tag/V2.8) is the latest release available!
 - Update Queue Detection for more support on resolutions
 - Updated README.md for how to get involved and help out
-- Updated how the program passes information from screen res allowing users to manually change their settings inside of the code
 
 ## Setup:
-1) Firstly Install Python and make sure to install the package manager PIP (Do This In Admin Privileges in CMD etc)
-2) Copy and paste the commands below into your terminal. This will install the Open Source packages needed to run the program.
-```
-pip install pyautogui
-pip install tesseract
-pip install pytesseract
-```
-3) Make Sure To Install Either 64bit or 32bit for your machine: [Tesseract Windows Installer](https://github.com/UB-Mannheim/tesseract/wiki)
-4) Make sure the path for the above installation is saved to this location or program will not work ('C:/Users/"YOURUSER"/AppData/Local/Programs/Tesseract-OCR/tesseract.exe')
-5) Now move the program into another drive preferably from the game and rename it to you choosing (bury this in a few random files)
-6) Enjoy usage!
+1) Download latest Release
+2) Start Exe
 
 # Usage:
 ## Usage ~ About:
-- I recommend using the obfuscated version of the project nicknamed "Obfuscated.py"
-- This is the fastest and most secure version of the program always
 - You should use this program in a private location only accessible to you such as the Memory Chamber ideally
 - You can change the name of the program and put it anywhere inside your file system to hide it further.
 ## Usage ~ Program Setup:
 - System automatically detects resolution and adjusts config accordingly
-- System asks you if you want to add more Buttons to the Click List
-- You can choose to expand out the default buttons which are: ['q','w','e','r','a','s','d','f']
-- System asks you to enter shortest/longest wait time to randomly select wait times between
-- System then asks you if you want to run Queue Detection (Use this if you are in a Queue, Currently Supported Resolution 1920x1080 - May work on others!)
-- If you do run Queue Detection it will continuously keep checking the screen to see if you are in a Queue every 10 seconds!
-- Make sure nothing blocks the Lost Ark "Waiting for Server" box otherwise the program will think you are out of the Queue!
+- System asks you if you want to run Queue Detection (Use this if you are in a Queue, Currently Supported Widesreen-Resolutions - May work on others!)
+- If you do run Queue Detection it will continuously keep checking the screen to see if you are in a Queue every 10 seconds! Even in Background NOT MINIMIZED!
 ## Usage ~ Program Run time:
 - The system starts off with a mouse click at a random screen location cords within the clickable area of the game
-- The system then presses a key which is randomly selected from the Buttons List (Either Default Or Custom)
+- The system then presses a key which is randomly selected from the Buttons List 
 - The system executes between mouse clicks and button presses between your random selected time frame
 - The systems selects a random screen coordinate to click every time
 - The system selects a random key button every time of the array of "usable" buttons
