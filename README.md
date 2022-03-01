@@ -23,12 +23,12 @@ To tackle the issue of long queue times and harsh AFK timers I have created an A
 - Lastly raise a GitHub issue with your screen resolution and the above details!
 
 # Latest Release:
-- Currently [V2.8](https://github.com/Eaglescream/lostArkAntiAFKBot/releases/tag/V2.8) is the latest release available!
+- Currently [2.8](https://github.com/Eaglescream/lostArkAntiAFKBot/releases/latest) is the latest release available!
 - Update Queue Detection for more support on resolutions
 - Updated README.md for how to get involved and help out
 
 ## Setup:
-1) Download latest Release
+1) Download [Latest Release](https://github.com/Eaglescream/lostArkAntiAFKBot/releases/latest)
 2) Start Exe
 
 # Usage:
