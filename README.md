@@ -48,17 +48,8 @@ To tackle the issue of long queue times and harsh AFK timers I have created an A
 - The program runs indefinitely until closed and be careful not to run the program e.g. just on your desktop
 
 # Release History:
-- [V2.5](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.5) (Major Release(Patch))
-- [V2.4](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.4) (Major Release(Patch))
-- [V2.3](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.3) (Major Release(Patch))
-- [V2.2](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.2) (Unsupported)
-- [V2.1](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.1) (Unsupported)
-- [V2.0](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.0) (Unsupported)
-- [V1.4](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.4) (Unsupported)
-- [V1.3](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.3) (Unsupported)
-- [V1.2](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.2) (Unsupported)
-- [V1.1](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.1) (Unsupported)
-- [V1.0](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.0) (Unsupported)
+- [V2.8](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.8) (Major Release(Patch))
+
 
 ## Plans for the future:
 - Wait for feedback of Queue detection and resolve any issues and add more resolution support!
