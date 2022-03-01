@@ -6,48 +6,28 @@ To tackle the issue of long queue times and harsh AFK timers I have created an A
 - Automatic Screen Resolution Detection (Changes Bot Click Area To Your Resolution!)
 - Allows you to change the default click list of buttons to randomise your session!
 - Allows you to set shortest/longest amount of time bot randomises between!
-- Queue Detection and Auto Character Launch - Supported Resolutions:
-```
-1920x1080
-2560x1080
-2560x1440
-3440x1440
-3840x1600
-```
-- Queue Detection - Languages Supported For Queue Detection: 
-```
-English
-German
-French
-Italian
-Turkish
-Danish
-```
+- Queue Detection - Screen Resolutions Supported For Queue Detection: (1920x1080,2560x1080) - Rest may work!
+- Queue Detection - Languages Supported For Queue Detection: (English,German,French,Italian,Turkish,Danish)
+- Auto Launches Character For You: (1920x1080,2560x1080) - Rest may work!
 
 # Want To Help The Project?
 - Currently Queue Detection only has a few supported resolutions. What I need is gathered user data from all screen resolutions.
 - Firstly download and setup https://github.com/mjdarby/ScreenCoordinateHelper
 - Next record the exact cords for the "Waiting for server/queue" Box and record these details as follow:
 ```
-randomxbot = play area bottom x
-randomxtop = play area top x
-randomybot = play area bottom y
-randomytop = play area top y
-launchx = character launch button x
-launchy = character launch button y
-scleft = Waiting Box Top Left (x value)
-sctop = Waiting Box Top Left (y value)
-scwidth = Waiting Box Width (work this out with x cords for left and right of the box)
-scheight = Waiting Box Height (work this out with y cords for top and bottom of the box)
+- Top Left = Top left of box
+- Top Middle = Top middle of the box
+- Width = The top right which in turn doing Top left minus Top right gives us the width)
+- Height = Top left of the box minus bottom left gives us the height.
 ```
-- For incorporation into the main branch I expect you to play around with your settings in the python program!
-- You should amend the settings for your resolution until you have a working Queue Detection in place!
+- Please then record the screen coordinates for the centre of the "launch character" box.
 - Lastly raise a GitHub issue with your screen resolution and the above details!
 
 # Latest Release:
-- Currently [V2.7](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.7) is the latest release available!
+- Currently [V2.5](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.5) is the latest release available!
 - Update Queue Detection for more support on resolutions
-- Changed the way screen resolutions get supported into the main program branch (requires user testing so I can just push release!)
+- Updated README.md for how to get involved and help out
+- Updated how the program passes information from screen res allowing users to manually change their settings inside of the code
 
 ## Setup:
 1) Firstly Install Python and make sure to install the package manager PIP (Do This In Admin Privileges in CMD etc)
@@ -85,10 +65,17 @@ pip install pytesseract
 - The program runs indefinitely until closed and be careful not to run the program e.g. just on your desktop
 
 # Release History:
-- [V2.7](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.7) (Major Release(Patch))
-- [V2.6](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.6) (Major Release(Patch))
 - [V2.5](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.5) (Major Release(Patch))
-- Check [Releases](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases) To See All Old History of V1.0 to V2.4
+- [V2.4](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.4) (Major Release(Patch))
+- [V2.3](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.3) (Major Release(Patch))
+- [V2.2](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.2) (Unsupported)
+- [V2.1](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.1) (Unsupported)
+- [V2.0](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.0) (Unsupported)
+- [V1.4](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.4) (Unsupported)
+- [V1.3](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.3) (Unsupported)
+- [V1.2](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.2) (Unsupported)
+- [V1.1](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.1) (Unsupported)
+- [V1.0](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V1.0) (Unsupported)
 
 ## Plans for the future:
 - Wait for feedback of Queue detection and resolve any issues and add more resolution support!

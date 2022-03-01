@@ -5,11 +5,9 @@
 
 | Version | Supported          |
 | ------- | ------------------ |
-| V2.7  | :white_check_mark: |
-| V2.6  | :white_check_mark: |
 | V2.5  | :white_check_mark: |
-| V2.4  | :x: |
-| V2.3  | :x: |
+| V2.4  | :white_check_mark: |
+| V2.3  | :white_check_mark: |
 | V2.2  | :x: |
 | V2.1  | :x: |
 | V2.0  | :x: |

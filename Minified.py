@@ -1,97 +1,87 @@
-g='Type Error: You Have Entered An Incorrect Type! Please Enter Either Y or N'
-f='Input Error: Please Enter Either Y or N'
-e='n'
-d='Type Error: You Have Entered An Incorrect Type! Please Enter An Integer'
-c='y'
-b=')'
-a=','
-Z='Mouse Clicked At: ('
-O=int
-L=ValueError
-H=True
-G=input
-C=str
-B='~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
-A=print
-import time as D,pyautogui as N,pytesseract as M,os
-P=os.environ.get('USERNAME')
-Q='C:/Users/'+P+'/AppData/Local/Programs/Tesseract-OCR/tesseract.exe'
+_G='Type Error: You Have Entered An Incorrect Type! Please Enter Either Y or N'
+_F='Input Error: Please Enter Either Y or N'
+_E='Type Error: You Have Entered An Incorrect Type! Please Enter An Integer'
+_D='Mouse Clicked At: ('
+_C=None
+_B=True
+_A='~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
+import time,pyautogui,pytesseract,os,win32gui,win32com.client,win32ui
+from ctypes import windll
+import ctypes
+user32=ctypes.windll.user32
+user=os.environ.get('USERNAME')
+tesseractpath='C:/Users/'+user+'/AppData/Local/Programs/Tesseract-OCR/tesseract.exe'
 from PIL import Image
-M.pytesseract.tesseract_cmd=Q
-from random import randint as E
-def R():
-	O='Using 2560x1440, Setting Randomx and Randomy';M=N.size()
-	if C(M)=='Size(width=640, height=480)':A('Using 640x480, Setting Randomx and Randomy');B=286;D=351;E=135;F=301;G=855;H=1014;I=771;J=435;K=373;L=204
-	elif C(M)=='Size(width=1280, height=720)':A('Using 1280x720, Setting Randomx and Randomy');B=573;D=702;E=271;F=602;G=855;H=1014;I=771;J=435;K=373;L=204
-	elif C(M)=='Size(width=1920, height=1080)':A('Using 1920x1080, Setting Randomx and Randomy');B=382;D=1582;E=181;F=903;G=855;H=1014;I=771;J=435;K=373;L=204
-	elif C(M)=='Size(width=2560, height=1440)':A(O);B=496;D=2056;E=235;F=1173;G=1135;H=1350;I=1030;J=609;K=496;L=220
-	elif C(M)=='Size(width=2560, height=1080)':A(O);B=500;D=2100;E=181;F=903;G=1135;H=1350;I=1030;J=609;K=496;L=220
-	elif C(M)=='Size(width=2048, height=1080)':A('Using 2048x1080, Setting Randomx and Randomy');B=404;D=1676;E=191;F=957;G=855;H=1014;I=771;J=435;K=373;L=204
-	elif C(M)=='Size(width=3440, height=1440)':A('Using 3440x1440, Setting Randomx and Randomy');B=500;D=2900;E=220;F=1173;G=1720;H=716;I=1468;J=609;K=400;L=300
-	elif C(M)=='Size(width=3840, height=2160)':A('Using 3840x2160, Setting Randomx and Randomy');B=572;D=3084;E=286;F=1759;G=855;H=1014;I=771;J=435;K=373;L=204
-	elif C(M)=='Size(width=3840, height=1600)':A('Using 3840x1600, Setting Randomx and Randomy');B=590;D=3320;E=260;F=1350;G=1760;H=1500;I=1642;J=676;K=552;L=246
-	elif C(M)=='Size(width=5120, height=1440)':A('Using 5120x1440, Setting Randomx and Randomy');B=744;D=4009;E=220;F=1173;G=855;H=1014;I=771;J=435;K=373;L=204
-	elif C(M)=='Size(width=7680, height=4320)':A('Using 7680x4320, Setting Randomx and Randomy');B=1488;D=6168;E=572;F=3518;G=855;H=1014;I=771;J=435;K=373;L=204
-	else:A('Using Non-Supported Res, Changing Randomx and Randomy to Default Location!');A('Please raise an issue on GitHub with your screen res for future custom support!');B=382;D=1582;E=181;F=903;G=855;H=1014;I=771;J=435;K=373;L=204
-	return B,D,E,F,G,H,I,J,K,L
-def S():
-	E='This is to large of a time input!';D='Must Type an Integer > 0';A('Usage Just Type an Integer e.g. 30')
-	while H:
+from PIL import ImageGrab
+pytesseract.pytesseract.tesseract_cmd=tesseractpath
+from random import randint
+LAWindowTitle='LOST ARK (64-bit, DX11) v.2.0.2.1'
+def ScreenSetup():A=LALocation();B=A[0]+round(1920*0.198958);C=A[0]+round(1920*0.823958);D=A[1]+round(1080*0.1675925925925926);E=A[1]+round(1080*0.8361111111111111);F=A[0]+round(1920*0.4453125);G=A[1]+round(1080*0.9388888888888889);H=771;I=435;J=373;K=204;return B,C,D,E,F,G,H,I,J,K
+def TimeSetup():
+	D='This is to large of a time input!';C='Must Type an Integer > 0'
+	while _B:
 		try:
-			B=O(G('Please Enter The Shortest Amount of Seconds To Wait Before Input - Recommended (30 seconds): '))
-			if B<=0:A(D)
-			elif B>=4294967:A(E)
+			A=int(30)
+			if A<=0:print(C)
+			elif A>=4294967:print(D)
 			else:
-				C=O(G('Please Enter The Longest Amount of Seconds To Wait Before Input - Recommended (1200 seconds): '))
-				if C<=0:A(D)
-				elif C<=B:A('This should be not equal to or larger then the lowest amount in range')
-				elif C>=4294967:A(E)
+				B=int(1200)
+				if B<=0:print(C)
+				elif B<=A:print('This should be not equal to or larger then the lowest amount in range')
+				elif B>=4294967:print(D)
 				else:break
-		except L:A('Invalid Entry: Usage Just Type an Integer e.g. 30')
-	return B,C
-def T(userTimeSettings):A=userTimeSettings;B=E(A[0],A[1]);return B
-def F(timeSleepSettings):E=timeSleepSettings;B=T(E);A('Next Interaction Time: '+C(B)+' second(s) or '+C(B//60)+' minute(s) (Integer Division Not Accurate Minute Representation)!');D.sleep(B)
-def U(resScreenSize):A=resScreenSize;B=E(A[0],A[1]);C=E(A[2],A[3]);return B,C
-def V(retScreenSize):F=retScreenSize;B=U(F);D=B[0];E=B[1];N.moveTo(D,E);N.click();A(Z+C(D)+a+C(E)+b)
-def W():
-	B=['q','w','e','r','a','s','d','f'];A('The Default Button Click List Is:');A(B)
-	while H:
+		except ValueError:print('Invalid Entry: Usage Just Type an Integer e.g. 30')
+	print('The Shortest Amount of Seconds To Wait Before Input - 30 seconds');print('The Longest Amount of Seconds To Wait Before Input - 1200 seconds');return A,B
+def RandomTimeGen(userTimeSettings):A=userTimeSettings;B=randint(A[0],A[1]);return B
+def TimeSleep(timeSleepSettings):B=timeSleepSettings;A=RandomTimeGen(B);print('Next Interaction Time: '+str(A)+' second(s) or '+str(A//60)+' minute(s) (Integer Division Not Accurate Minute Representation)!');time.sleep(A)
+def RandomLocationGen(resScreenSize):A=resScreenSize;B=randint(A[0],A[1]);C=randint(A[2],A[3]);return B,C
+def LAForeground():A=win32gui.FindWindow(_C,LAWindowTitle);B=win32com.client.Dispatch('WScript.Shell');B.SendKeys('%');win32gui.SetForegroundWindow(A)
+def LALocation():
+	if LAWindowTitle:
+		B=win32gui.FindWindow(_C,LAWindowTitle)
+		if B:A=win32gui.GetWindowRect(B);C=A[0];D=A[1];E=A[2]-C;F=A[3]-D;return C,D,E,F
+		else:print('Window not found!')
+def MouseClick(retScreenSize):LAForeground();D=retScreenSize;A=RandomLocationGen(D);B=A[0];C=A[1];pyautogui.moveTo(B,C);pyautogui.click();print(_D+str(B)+','+str(C)+')')
+def ButtonSetup():
+	A=['q','w','e','r','a','s','d','f'];print('The Default Button Click List Is:');print(A)
+	while _B:
 		try:
-			E=C(G('Would You Like To Add More Keys To The ButtonClickList? Enter (Y) or (N): ')).lower()
-			if E==c:
-				while H:
+			C=str('n').lower()
+			if C=='y':
+				while _B:
 					try:
-						D=O(G('How Many Keys Would You Like To Add To The List: '))
-						for I in range(D):F=G("Please Press a Key or Write The Key, Such As 'space' and then press enter: ");B.append(F)
+						B=int(input('How Many Keys Would You Like To Add To The List: '))
+						for E in range(B):D=input("Please Press a Key or Write The Key, Such As 'space' and then press enter: ");A.append(D)
 						break
-					except L:A(d)
+					except ValueError:print(_E)
 				break
-			elif E==e:D=0;break
-			else:A(f)
-		except L:A(g)
-	return B,D
-def X(buttonSetup):B=buttonSetup;D=B[0];F=B[1]+7;G=E(0,F);C=D[G];N.press(C);A('Button Clicked: '+C)
-def Y(retScreenSize):
-	X='queueDetectionScreenshot.png';K='Sit Tight!';J='~Waiting 10 Seconds To Reanylse Screen!';I='Still in Queue :(';E=retScreenSize;O=E[4];P=E[5];R=E[6];S=E[7];T=E[8];U=E[9]
-	while H:
+			elif C=='n':B=0;break
+			else:print(_F)
+		except ValueError:print(_G)
+	return A,B
+def ButtonClick(buttonSetup):A=buttonSetup;LAForeground();C=A[0];D=A[1]+7;E=randint(0,D);B=C[E];pyautogui.press(B);print('Button Clicked: '+B)
+def screenshot(window_title=_C):F=retScreenSize[6];G=retScreenSize[7];J=F+retScreenSize[8];K=G+retScreenSize[9];B=win32gui.FindWindow(_C,LAWindowTitle);L,M,N,O=win32gui.GetWindowRect(B);P=N-L;Q=O-M;H=win32gui.GetWindowDC(B);C=win32ui.CreateDCFromHandle(H);D=C.CreateCompatibleDC();A=win32ui.CreateBitmap();A.CreateCompatibleBitmap(C,P,Q);D.SelectObject(A);S=windll.user32.PrintWindow(B,D.GetSafeHdc(),0);I=A.GetInfo();R=A.GetBitmapBits(_B);E=Image.frombuffer('RGB',(I['bmWidth'],I['bmHeight']),R,'raw','BGRX',0,1);win32gui.DeleteObject(A.GetHandle());D.DeleteDC();C.DeleteDC();win32gui.ReleaseDC(B,H);E=E.crop((F,G,J,K));return E
+def QueueDetection(retScreenSize):
+	I='queueDetectionScreenshot.png';E='Sit Tight!';D='~Waiting 10 Seconds To Reanylse Screen!';C='Still in Queue :(';A=retScreenSize;F=A[4];G=A[5];L=A[6];M=A[7];N=A[8];O=A[9]
+	while _B:
 		try:
-			A('Make Sure Nothing is covering your lost ark window, specifficaly the Queue Box!');Q=C(G('Would You Like To Start Queue Detection? Enter (Y) or (N): ')).lower()
-			if Q==c:
+			print('Make Sure Nothing is covering your lost ark window, specifficaly the Queue Box!');H=str(input('Would You Like To Start Queue Detection? Enter (Y) or (N): ')).lower()
+			if H=='y':
 				try:
-					while H:
-						V=N.screenshot(region=(R,S,T,U));V.save(X);W=X;A(B);A('Lost Ark Screen Being Analysed');D.sleep(1);F=M.image_to_string(Image.open(W))
-						if'Waiting'in F:A(B);A(I);A(J);A(K);A(B);D.sleep(9)
-						elif'Warten'in F:A(B);A(I);A(J);A(K);A(B);D.sleep(9)
-						elif'Venter'in F:A(B);A(I);A(J);A(K);A(B);D.sleep(9)
-						elif'Attendre'in F:A(B);A(I);A(J);A(K);A(B);D.sleep(9)
-						elif'In attesa'in F:A(B);A(I);A(J);A(K);A(B);D.sleep(9)
-						elif'Bekleme'in F:A(B);A(I);A(J);A(K);A(B);D.sleep(9)
-						else:A('Out of Queue! :)');A('Waiting 60 seconds to launch your character!');A(B);D.sleep(60);N.moveTo(O,P);N.click();A(Z+C(O)+a+C(P)+b);A('Character Launch In Progress!');A('30 Second Wait Time!');D.sleep(30);break
+					while _B:
+						J=screenshot(LAWindowTitle);J.save(I);K=I;print(_A);print('Lost Ark Screen Being Analysed');time.sleep(1);B=pytesseract.image_to_string(Image.open(K))
+						if'Waiting'in B:print(_A);print(C);print(D);print(E);print(_A);time.sleep(9)
+						elif'Warten'in B:print(_A);print(C);print(D);print(E);print(_A);time.sleep(9)
+						elif'Venter'in B:print(_A);print(C);print(D);print(E);print(_A);time.sleep(9)
+						elif'Attendre'in B:print(_A);print(C);print(D);print(E);print(_A);time.sleep(9)
+						elif'In attesa'in B:print(_A);print(C);print(D);print(E);print(_A);time.sleep(9)
+						elif'Bekleme'in B:print(_A);print(C);print(D);print(E);print(_A);time.sleep(9)
+						else:print('Out of Queue! :)');print('Waiting 60 seconds to launch your character!');print(_A);time.sleep(60);LAForeground();pyautogui.moveTo(F,G);pyautogui.click();print(_D+str(F)+','+str(G)+')');print('Character Launch In Progress!');print('30 Second Wait Time!');time.sleep(30);break
 					break
-				except L:A(d)
-			elif Q==e:break
-			else:A(f)
-		except L:A(g)
+				except ValueError:print(_E)
+			elif H=='n':break
+			else:print(_F)
+		except ValueError:print(_G)
 if __name__=='__main__':
-	A(B);I=R();A(B);D.sleep(1);J=W();A(B);A('The Button Click List Is: ');A(J[0]);A(B);D.sleep(1);K=S();A(B);Y(I);A(B)
-	while H:F(K);V(I);F(K);X(J)
+	print(_A);retScreenSize=ScreenSetup();print(_A);time.sleep(1);buttonSetup=ButtonSetup();print(_A);time.sleep(1);timeSleepSettings=TimeSetup();print(_A);QueueDetection(retScreenSize);print(_A)
+	while _B:TimeSleep(timeSleepSettings);MouseClick(retScreenSize);TimeSleep(timeSleepSettings);ButtonClick(buttonSetup)

@@ -2,172 +2,50 @@ import time
 import pyautogui
 import pytesseract
 import os
+import win32gui, win32com.client
+import win32ui
+
+from ctypes import windll
+#import Image
+
+import ctypes
+user32 = ctypes.windll.user32
 user = os.environ.get('USERNAME')
 tesseractpath = 'C:/Users/' + user + '/AppData/Local/Programs/Tesseract-OCR/tesseract.exe'
 from PIL import Image
+from PIL import ImageGrab
 pytesseract.pytesseract.tesseract_cmd = tesseractpath
 from random import randint
 
+LAWindowTitle = "LOST ARK (64-bit, DX11) v.2.0.2.1" 
+
 def ScreenSetup():
-    res = pyautogui.size()
-    if str(res) == "Size(width=640, height=480)":
-        print("Using 640x480, Setting Randomx and Randomy")
-        randomxbot = 286
-        randomxtop = 351
-        randomybot = 135
-        randomytop = 301
-        launchx = 855
-        launchy = 1014
-        scleft = 771
-        sctop = 435
-        scwidth = 373
-        scheight = 204
-    elif str(res) == "Size(width=1280, height=720)":
-        print("Using 1280x720, Setting Randomx and Randomy")
-        randomxbot = 573
-        randomxtop = 702
-        randomybot = 271
-        randomytop = 602
-        launchx = 855
-        launchy = 1014
-        scleft = 771
-        sctop = 435
-        scwidth = 373
-        scheight = 204
-    elif str(res) == "Size(width=1920, height=1080)":
-        print("Using 1920x1080, Setting Randomx and Randomy")
-        randomxbot = 382
-        randomxtop = 1582
-        randomybot = 181
-        randomytop = 903
-        launchx = 855
-        launchy = 1014
-        scleft = 771
-        sctop = 435
-        scwidth = 373
-        scheight = 204
-    elif str(res) == "Size(width=2560, height=1440)":
-        print("Using 2560x1440, Setting Randomx and Randomy")
-        randomxbot = 496
-        randomxtop = 2056
-        randomybot = 235
-        randomytop = 1173
-        launchx = 1135
-        launchy = 1350
-        scleft = 1030
-        sctop = 609
-        scwidth = 496
-        scheight = 220
-    elif str(res) == "Size(width=2560, height=1080)":
-        print("Using 2560x1440, Setting Randomx and Randomy")
-        randomxbot = 500
-        randomxtop = 2100
-        randomybot = 181
-        randomytop = 903
-        launchx = 1135
-        launchy = 1350
-        scleft = 1030
-        sctop = 609
-        scwidth = 496
-        scheight = 220
-    elif str(res) == "Size(width=2048, height=1080)":
-        print("Using 2048x1080, Setting Randomx and Randomy")
-        randomxbot = 404
-        randomxtop = 1676
-        randomybot = 191
-        randomytop = 957
-        launchx = 855
-        launchy = 1014
-        scleft = 771
-        sctop = 435
-        scwidth = 373
-        scheight = 204
-    elif str(res) == "Size(width=3440, height=1440)":
-        print("Using 3440x1440, Setting Randomx and Randomy")
-        randomxbot = 500
-        randomxtop = 2900
-        randomybot = 220
-        randomytop = 1173
-        launchx = 1720
-        launchy = 716
-        scleft = 1468
-        sctop = 609
-        scwidth = 400
-        scheight = 300
-    elif str(res) == "Size(width=3840, height=2160)":
-        print("Using 3840x2160, Setting Randomx and Randomy")
-        randomxbot = 572
-        randomxtop = 3084
-        randomybot = 286
-        randomytop = 1759
-        launchx = 855
-        launchy = 1014
-        scleft = 771
-        sctop = 435
-        scwidth = 373
-        scheight = 204
-    elif str(res) == "Size(width=3840, height=1600)":
-        print("Using 3840x1600, Setting Randomx and Randomy")
-        randomxbot = 590
-        randomxtop = 3320
-        randomybot = 260
-        randomytop = 1350
-        launchx = 1760
-        launchy = 1500
-        scleft = 1642
-        sctop = 676
-        scwidth = 552
-        scheight = 246
-    elif str(res) == "Size(width=5120, height=1440)":
-        print("Using 5120x1440, Setting Randomx and Randomy")
-        randomxbot = 744
-        randomxtop = 4009
-        randomybot = 220
-        randomytop = 1173
-        launchx = 855
-        launchy = 1014
-        scleft = 771
-        sctop = 435
-        scwidth = 373
-        scheight = 204
-    elif str(res) == "Size(width=7680, height=4320)":
-        print("Using 7680x4320, Setting Randomx and Randomy")
-        randomxbot = 1488
-        randomxtop = 6168
-        randomybot = 572
-        randomytop = 3518
-        launchx = 855
-        launchy = 1014
-        scleft = 771
-        sctop = 435
-        scwidth = 373
-        scheight = 204
-    else:
-        print("Using Non-Supported Res, Changing Randomx and Randomy to Default Location!")
-        print("Please raise an issue on GitHub with your screen res for future custom support!")
-        randomxbot = 382
-        randomxtop = 1582
-        randomybot = 181
-        randomytop = 903
-        launchx = 855
-        launchy = 1014
-        scleft = 771
-        sctop = 435
-        scwidth = 373
-        scheight = 204
+    WindowLocation = LALocation()
+    randomxbot = WindowLocation[0] + round(1920*0.198958)
+    randomxtop = WindowLocation[0] + round(1920*0.823958)
+    randomybot = WindowLocation[1] + round(1080*0.16759259259259259)
+    randomytop = WindowLocation[1] + round(1080*0.83611111111111111)
+    launchx = WindowLocation[0] + round(1920*0.4453125)
+    launchy = WindowLocation[1] + round(1080*0.9388888888888888888)
+    scleft = 771
+    sctop = 435
+    scwidth = 373
+    scheight = 204
     return randomxbot,randomxtop,randomybot,randomytop,launchx,launchy,scleft,sctop,scwidth,scheight
 
 def TimeSetup():
-    print("Usage Just Type an Integer e.g. 30")
+    
     while True:
         try:
-            timebot = int(input("Please Enter The Shortest Amount of Seconds To Wait Before Input - Recommended (30 seconds): "))
+            #timebot = int(input("Please Enter The Shortest Amount of Seconds To Wait Before Input - Recommended (30 seconds): "))
+            timebot = int(30)
             if timebot <= 0:
                 print("Must Type an Integer > 0")
             elif timebot >= 4294967:
                 print("This is to large of a time input!")
             else:
-                timetop = int(input("Please Enter The Longest Amount of Seconds To Wait Before Input - Recommended (1200 seconds): "))
+                #timetop = int(input("Please Enter The Longest Amount of Seconds To Wait Before Input - Recommended (1200 seconds): "))
+                timetop = int(1200)
                 if timetop <= 0:
                     print("Must Type an Integer > 0")
                 elif timetop <= timebot:
@@ -178,6 +56,9 @@ def TimeSetup():
                     break
         except ValueError:
             print("Invalid Entry: Usage Just Type an Integer e.g. 30")
+
+    print("The Shortest Amount of Seconds To Wait Before Input - 30 seconds")
+    print("The Longest Amount of Seconds To Wait Before Input - 1200 seconds")
     return timebot,timetop
 
 def RandomTimeGen(userTimeSettings):
@@ -197,7 +78,32 @@ def RandomLocationGen(resScreenSize):
         randomy = randint(screenSetup[2],screenSetup[3])
         return randomx,randomy
 
+def LAForeground():
+    #Bring to Foreground
+    hwnd = win32gui.FindWindow(None, LAWindowTitle)
+    shell = win32com.client.Dispatch("WScript.Shell")
+    shell.SendKeys('%')
+    win32gui.SetForegroundWindow(hwnd)
+    #win32gui.ReleaseDC(hwnd)
+
+def LALocation():
+    if LAWindowTitle:
+        hwnd = win32gui.FindWindow(None, LAWindowTitle)
+        #print(hwnd)
+        if hwnd:
+            window_rect = win32gui.GetWindowRect(hwnd)
+            #print(window_rect)
+            LAleft = window_rect[0]
+            LAtop = window_rect[1]
+            LAwidth = window_rect[2] - LAleft
+            LAheight = window_rect[3] - LAtop
+            return LAleft,LAtop,LAwidth,LAheight
+            
+        else:
+            print('Window not found!')
+
 def MouseClick(retScreenSize):
+    LAForeground()
     resScreenSize = retScreenSize
     randomlocval = RandomLocationGen(resScreenSize)
     randomx = randomlocval[0]
@@ -206,13 +112,15 @@ def MouseClick(retScreenSize):
     pyautogui.click()
     print("Mouse Clicked At: (" + str(randomx) + "," + str(randomy) + ")")
 
+
 def ButtonSetup():
     ButtonClickList = ['q','w','e','r','a','s','d','f']
     print("The Default Button Click List Is:")
     print(ButtonClickList)
     while True:
         try:
-            menuCheck = str(input("Would You Like To Add More Keys To The ButtonClickList? Enter (Y) or (N): ")).lower()
+            #menuCheck = str(input("Would You Like To Add More Keys To The ButtonClickList? Enter (Y) or (N): ")).lower()
+            menuCheck = str("n").lower()
             if menuCheck == "y":
                 while True:
                     try:
@@ -234,12 +142,52 @@ def ButtonSetup():
     return ButtonClickList,amountToAppendCheck
 
 def ButtonClick(buttonSetup):
+    LAForeground()
     ButtonClickList = buttonSetup[0]
     ButtonClickTop = buttonSetup[1] + 7
     RandomButtonChoice = randint(0,ButtonClickTop)
     ButtonClick = ButtonClickList[RandomButtonChoice]
     pyautogui.press(ButtonClick)
     print("Button Clicked: " + ButtonClick)
+
+def screenshot(window_title=None):
+    #Crop Location
+    scleft = retScreenSize[6]
+    sctop = retScreenSize[7]
+    scwidth = scleft + retScreenSize[8] 
+    scheight = sctop + retScreenSize[9] 
+    #Window Rect
+    hwnd = win32gui.FindWindow(None, LAWindowTitle)
+    left, top, right, bot = win32gui.GetWindowRect(hwnd)
+    w = right - left
+    h = bot - top
+
+    hwndDC = win32gui.GetWindowDC(hwnd)
+    mfcDC  = win32ui.CreateDCFromHandle(hwndDC)
+    saveDC = mfcDC.CreateCompatibleDC()
+
+    saveBitMap = win32ui.CreateBitmap()
+    saveBitMap.CreateCompatibleBitmap(mfcDC, w, h)
+
+    saveDC.SelectObject(saveBitMap)
+    result = windll.user32.PrintWindow(hwnd, saveDC.GetSafeHdc(), 0)
+    
+    bmpinfo = saveBitMap.GetInfo()
+    bmpstr = saveBitMap.GetBitmapBits(True)
+
+    im = Image.frombuffer(
+        'RGB',
+        (bmpinfo['bmWidth'], bmpinfo['bmHeight']),
+        bmpstr, 'raw', 'BGRX', 0, 1)
+
+    win32gui.DeleteObject(saveBitMap.GetHandle())
+    saveDC.DeleteDC()
+    mfcDC.DeleteDC()
+    win32gui.ReleaseDC(hwnd, hwndDC)
+
+    im = im.crop((scleft,sctop,scwidth,scheight))
+    
+    return im
 
 def QueueDetection(retScreenSize):
     launchx = retScreenSize[4]
@@ -255,8 +203,8 @@ def QueueDetection(retScreenSize):
             if menuCheck == "y":
                     try:
                         while True:
-                            queueDetectionScreenshot = pyautogui.screenshot(region=(scleft,sctop,scwidth,scheight))
-                            queueDetectionScreenshot.save(r"queueDetectionScreenshot.png")
+                            queDetectionTestScreenshot=screenshot(LAWindowTitle)
+                            queDetectionTestScreenshot.save(r"queueDetectionScreenshot.png")
                             path = 'queueDetectionScreenshot.png'
                             print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
                             print("Lost Ark Screen Being Analysed")
@@ -310,6 +258,9 @@ def QueueDetection(retScreenSize):
                                 print("Waiting 60 seconds to launch your character!")
                                 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
                                 time.sleep(60)
+                                
+                                LAForeground()
+
                                 pyautogui.moveTo(launchx,launchy)
                                 pyautogui.click()
                                 print("Mouse Clicked At: (" + str(launchx) + "," + str(launchy) + ")")
@@ -335,16 +286,13 @@ if __name__ == "__main__":
     time.sleep(1)
     buttonSetup = ButtonSetup()
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-    print("The Button Click List Is: ")
-    print(buttonSetup[0])
-    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     time.sleep(1)
     timeSleepSettings = TimeSetup()
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     QueueDetection(retScreenSize)
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     while True:
-        TimeSleep(timeSleepSettings)  
+        TimeSleep(timeSleepSettings)
         MouseClick(retScreenSize)
         TimeSleep(timeSleepSettings)
         ButtonClick(buttonSetup)
