@@ -5,8 +5,16 @@ To tackle the issue of long queue times and harsh AFK timers I have created an A
 # Feature Set:
 - Automatic Screen Resolution Detection (Changes Bot Click Area To Your Resolution!)
 - Set shortest(30sec)/longest(1200sec) amount of time bot randomises between!
-- Queue Detection - Screen Resolutions Supported For Queue Detection: (All Widesreen-Resolutions should work) - Rest may work!
-- Queue Detection - Languages Supported For Queue Detection: (English,German,French,Italian,Turkish,Danish)
+- Queue Detection - Screen Resolutions Supported For Queue Detection: 
+```
+- (All Widesreen-Resolutions should work) - Rest may work!
+```
+Queue Detection - Languages Supported For Queue Detection: 
+```
+    English              German
+    French               Italian
+    Turkish              Danish
+```
 - Auto Launches Character For You: (All Widesreen-Resolutions should work) - Rest may work!
 
 # Want To Help The Project?
