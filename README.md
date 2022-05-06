@@ -7,7 +7,7 @@
         frameborder="0" 
         sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
     </iframe>
-</div<iframe src="https://discord.com/widget?id=967250293190434907&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>>
+</div>
 # Lost Ark Anti AFK Bot:
 To tackle the issue of long queue times and harsh AFK timers I have created an Anti AFK Bot For Lost ARK
 
