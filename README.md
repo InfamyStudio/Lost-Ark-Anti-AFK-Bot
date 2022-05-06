@@ -2,7 +2,7 @@
 <br>
 <table>
     <tr>
-        <td><a href="https://discord.com/invite/A6JcaD4VvP"><img src="https://edent.github.io/SuperTinyIcons/images/svg/discord.svg" width="125" title="Discord" /></a></td>
+        <td><a href="https://discord.com/invite/A6JcaD4VvP" target="_blank"><img src="https://edent.github.io/SuperTinyIcons/images/svg/discord.svg" width="125" title="Discord" /></a></td>
         <td><p><--- Join our Discord!</p></td>
     </tr>
 </table>
