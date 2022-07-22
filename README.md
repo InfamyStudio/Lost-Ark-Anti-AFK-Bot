@@ -1,5 +1,8 @@
 [![CodeQL](https://github.com/InfamyStudio/lostArkAntiAFKBot/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/InfamyStudio/lostArkAntiAFKBot/actions/workflows/codeql-analysis.yml)
 <br>
+# Project Completed/No More Development - Do with it as you please!
+## I hope this has helped the community, latest version will work until the end of time!
+<br>
 <table>
     <tr>
         <td><a href="https://discord.com/invite/A6JcaD4VvP" target="_blank"><img src="https://edent.github.io/SuperTinyIcons/images/svg/discord.svg" width="125" title="Discord" /></a></td>
@@ -96,11 +99,6 @@ pip install pytesseract
 - [V2.6](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.6) (Major Release(Patch))
 - [V2.5](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.5) (Major Release(Patch))
 - Check [Releases](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases) To See All Old History of V1.0 to V2.4
-
-## Plans for the future:
-- Wait for feedback of Queue detection and resolve any issues and add more resolution support!
-- Playing around with windows notifications and discord hooks!
-- Possibly turning into a UI based program or offering both!
 
 ## About:
 - Built this program for a friend and the program currently is fully undetected and ready to go
