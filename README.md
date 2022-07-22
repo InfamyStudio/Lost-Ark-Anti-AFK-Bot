@@ -33,27 +33,6 @@ Italian
 Turkish
 Danish
 ```
-
-# Want To Help The Project?
-- Currently Queue Detection only has a few supported resolutions. What I need is gathered user data from all screen resolutions.
-- Firstly download and setup https://github.com/mjdarby/ScreenCoordinateHelper
-- Next record the exact cords for the "Waiting for server/queue" Box and record these details as follow:
-```
-randomxbot = play area bottom x
-randomxtop = play area top x
-randomybot = play area bottom y
-randomytop = play area top y
-launchx = character launch button x
-launchy = character launch button y
-scleft = Waiting Box Top Left (x value)
-sctop = Waiting Box Top Left (y value)
-scwidth = Waiting Box Width (work this out with x cords for left and right of the box)
-scheight = Waiting Box Height (work this out with y cords for top and bottom of the box)
-```
-- For incorporation into the main branch I expect you to play around with your settings in the python program!
-- You should amend the settings for your resolution until you have a working Queue Detection in place!
-- Lastly raise a GitHub issue with your screen resolution and the above details!
-
 # Latest Release:
 - Currently [V2.7](https://github.com/InfamyStudio/lostArkAntiAFKBot/releases/tag/V2.7) is the latest release available!
 - Update Queue Detection for more support on resolutions
